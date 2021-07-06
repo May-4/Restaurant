@@ -1,0 +1,126 @@
+
+*{
+    margin:0;padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(100px);
+    font-family:'Nunito', sans-serif;
+    overflow: hidden;
+}
+.login_form , .singup_form{
+    width: 100%; height: 100%;
+}
+.container{
+    width: 80%;
+    height: 100%;
+}
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_wrap{ height:100%;}
+.login_form .form{ 
+    min-width: 500px; min-height: 500px;
+    background-color: #dfda99;
+}
+.wrapper{ width:100%; }
+
+.input_wrap{
+    width: 80%;
+    padding: 10px;
+    margin:0 auto;
+}
+input{
+    display: block;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    width: 100%;
+}
+input:focus-visible{
+    outline: none;
+}
+.login_btn,.singup_btn{
+    display: block;
+    margin:0 auto;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 16px;
+    font-size: 18px;
+}
+.login_btn:active , .singup_btn:active{
+    background-color: black;
+    color:white;
+}
+.login_text{
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a{ text-decoration: none;}
+a:active{ color:black;}
+.sing_up{
+    text-align: center;
+    line-height: 2;
+    margin-top: 40px;
+}
+.singup_link,.sing_up:last-child(p){
+    color: rgb(66, 66, 139);
+}
+
+/* Start Sing up / Create Account */
+
+.singup_form .form{
+    min-width:600px; min-height: 600px;
+    background-color: #dfda99;
+    padding:50px;
+}
+.terms{ justify-content:flex-start;}
+.singup_form input{
+    margin:10px 0;
+}
+.terms input{
+    width: 13px;
+    margin-right: 10px;
+}
+.terms span{
+    color: rgb(66, 66, 139);
+    cursor: pointer;
+}
+.singup_btn{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+hr{color:black;}
+.exist_acc{
+    width: 80%;
+    margin:0 auto;
+ }
+.exist_or{
+    text-align: center;
+    margin: 20px 0;
+}
+.acc{
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.acc:active{
+    color:rgb(75, 63, 241);
+    transition: 1ms;
+    
+}

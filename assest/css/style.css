@@ -20,6 +20,9 @@ body{
     box-sizing: border-box;
     font-family:'Nunito', sans-serif;
 }
+section{
+    width:100%;
+}
 .container{
     width:80%; height: 100%;
     margin:0 auto;
@@ -46,8 +49,9 @@ li{
     --black:#000030;
     --white:#ffffff;
     --pink:#F60966;
-    --violet:#914A9E;
     --black-blue:#31517A;
+    --orange:#f7a610;
+    --soft-green:#00D68F;
     --outer-shadow: 2px 2px 5px var(--bg-black-50),
                     -2px -2px 5px var(--bg-black-50);
     --inner-shadow:inset 2px 2px 5px var(--bg-black-50),
@@ -61,6 +65,7 @@ li{
         position:absolute;
         /* background-color: var(--white); */
         backdrop-filter: blur(50px);
+        z-index:100;
     }
     .navbar{
         display: flex;
@@ -86,7 +91,8 @@ li{
         margin-right: 30px;
         padding: 5px 10px;
     }
-    .navbar_link{    }
+    .navbar_link{    } 
+    
     .active{
         color:var(--pink);
         border-bottom: 1px solid var(--pink);

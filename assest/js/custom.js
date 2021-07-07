@@ -48,7 +48,33 @@ console.log("a");
         });
     } 
 
-// To Top Btn
+// Slider for feedback
+    let slide_row=document.querySelector(".slide_row");
+    let slide_icons=document.querySelectorAll(".slide_icon .icon");
+
+    slide_icons.forEach(icon=>{
+        icon.addEventListener("click",()=>{
+            for(let i=0;i<slide_icons.length;i++){
+                slide_icons[i].classList.remove("icon_active");
+            }
+            icon.classList.add("icon_active");
+        })
+    }); // Add .active_icon to Icon
+    for(let j=0;j<slide_icons.length;j++){
+        slide_icons[j].onclick= function (params) {
+            let num= j*1079; // 1079 is width of slide_col
+            slide_row.style.transform=`translate(-${num}px)`;
+            return;
+        }
+    } // Slide
+
+
+// Feedback Form Alert
+    let feedback_btn= document.querySelector(".feedback_form-btn");
+    feedback_btn.addEventListener("click",()=>{
+        let aa=confirm("are you sure");
+    })
+
 
 //User Acc block when Login Btn Click 
 let login= document.querySelector(".acc_login");

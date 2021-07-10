@@ -70,18 +70,14 @@ console.log("a");
 
 
 // Feedback Form Alert
-    let feedback_btn= document.querySelector(".feedback_form-btn");
+    let feedback_btn= document.querySelector(".feedback_form_btn");
     feedback_btn.addEventListener("click",()=>{
         let aa=confirm("are you sure");
-    })
+    });
 
+// Show User Acc  when Login Btn Click 
 
-//User Acc block when Login Btn Click 
-let login= document.querySelector(".acc_login");
-/*
-login.addEventListener("click",()=>{
-    let user= document.querySelector(".acc_user");
-    login.classList.add("d_none");
-    user.classList.remove("d_none");
-    user.classList.add("d_block");
-})*/
+// Add Data to Copyrigt
+const year=document.getElementById("year");
+year.textContent= new Date().getFullYear();
+   

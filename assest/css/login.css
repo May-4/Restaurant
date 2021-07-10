@@ -1,0 +1,143 @@
+/* *{
+    margin:0;padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family:'Nunito', sans-serif;
+    
+} */
+
+.login_form , .singup_form{
+    width: 100%; height: 100%;
+    /* background: linear-gradient(rgba(29, 27, 27, 0.5), rgba(41, 37, 37, 0.5)), url("../img/home/home_bg_2.jpg");
+    background-size: cover;   */
+    
+}
+.container{
+    width: 80%;
+    height: 100%;
+    margin:auto;
+}
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_form a, .singup_form a{
+    text-decoration: none;
+    color:#31517A;
+}
+#password{
+    position: relative !important;
+}
+#singup_eye , #eye { 
+    position: absolute;
+    cursor:pointer;
+    top: 0;right: 5px;    
+    color: green;
+    z-index: 100;
+
+}
+.d_none{
+    display: none;
+}
+.d_block{ display: block; transition: all 1.5s;}
+
+/* Form  */
+    .login_form .form{ width:40%;}
+    .form_wrap{ height:100%}
+    .form{ 
+        padding: 30px;
+        background-color: rgba(245, 243, 243, 0.4);
+        backdrop-filter: blur(10px) ;
+        color: black;
+        box-shadow: 2px 2px 5px #76777a, -2px -2px 5px #8e8f92;
+    }
+
+    .wrapper{ width:100%; }
+    .login_text , .singup_text{
+        font-size: 25px;
+        font-family: sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+        color:#31517A;
+    }
+
+/* Input Type */
+    .input_wrap{
+        padding:30px 0;
+        overflow: hidden;
+    }
+    input{
+        width: 100%; display: block;
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid rgb(97, 85, 85);
+        font-size: 18px; 
+        margin-bottom: 30px;
+    }
+    input:focus-visible{
+        outline: none;
+    }
+    input::placeholder{
+        color:black;
+        font-style:normal;
+        font-family: monospace  !important;
+    }
+
+/* Css for Btn And Singup Link IN Login Form*/
+    .login_btn,.singup_btn{
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        background: #31517A;
+        border-radius: 12px;
+        font-size: 18px;
+        transform: scale(1);
+    }
+    .login_btn a{ color: white !important; }
+    .login_btn:active , .singup_btn:active{
+       transform: scale(1.01);
+    }
+    .forgot_text{ display: inline-block;}
+
+    .sing_up { 
+        font-size: 16px ;
+        color: black !important;
+    }
+    .singup_link:active a , .forgot_text:active a{
+        color: #dad9e2;
+    }
+/* End for Login Fornm */
+
+/* Css for SingUp Form */
+    .singup_form .form{ width:50%;}
+    .terms{ 
+        justify-content:flex-start;
+        margin-bottom: 30px;
+    }
+    input[type="checkbox"]{
+        display: inline;
+        width: auto;
+        margin: 0; margin-right: 20px;
+    }
+    .terms span{
+        color: rgb(66, 66, 139);
+        cursor: pointer;
+    }
+    .terms span:active{ color:#dad9e2;}
+    .singup_btn a{ color: white !important; }
+    .acc{
+        margin-top: 30px;
+    }
+    .acc p{ font-size:large;}
+/* End Css for SingUp Form */
+    .exist_acc hr{
+        width: 100%;
+    }
+    .exist_acc .acc{ justify-content: flex-start !important;}
+    .icon_form{
+        margin:0 20px;
+    }

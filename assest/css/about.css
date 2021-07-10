@@ -6,7 +6,7 @@
 }
 .about_section{
     min-height: 100vh;
-    background: linear-gradient(rgba(29, 27, 27, 0.5), rgba(119, 116, 116, 0.5)), url("../img//about/abour_bg.webp");
+    background: linear-gradient(rgba(29, 27, 27, 0.5), rgba(119, 116, 116, 0.5)), url("../img/about/abour_bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:right top;

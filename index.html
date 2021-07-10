@@ -11,9 +11,14 @@
     <!-- End Icon link -->
 
     <!-- Custom Css -->
+    <!-- <link rel="stylesheet" href="assest/css/login.css"> -->
     <link rel="stylesheet" href="assest/css/style.css">
     <link rel="stylesheet" href="assest/css/about.css">
+    <link rel="stylesheet" href="assest/css/menu.css">
     <link rel="stylesheet" href="assest/css/feedback.css">
+    <link rel="stylesheet" href="assest/css/contact.css">
+    
+    
     <!-- End Custom Css -->
 
     <title>Restaurant</title>
@@ -47,11 +52,12 @@
                 <div class="flex_center">
                     <div class="account flex_center">
                         <div class="acc_login border_hover">
-                            <a href="assest/html/login_form.html" class="login">
-                                Login
+                            <!-- assest/html/next_form.html -->
+                            <a href="assest/html/next_form.html" class="login"> 
+                                Login 
                             </a>
                         </div>
-                        <div class="acc_user flex_center d_none">
+                        <div class="acc_user d_none ">
                             <div class="user_img"> 
                                 <i class="fa fa-user"></i>
                             </div>
@@ -62,21 +68,27 @@
                     </div>
                     <div class="cart">
                         <a href="#"> <i class="fa fa-cart-plus"></i></a>
+                        <span class="badge"> </span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 <!-- for Navbar end -->
+    
+<!-- For Login Form Include start -->
+    <!-- <div include_html="assest/html/form.html" class="form_include">
+
+    </div> -->
+<!-- For Login Form  Include end -->
 
 <!-- Top_Btn -->
-
 <!-- End Top_Btn -->
 
 <!-- for Home start -->
     <section class="home_section" id="home">
         <div class="container">
-            <div class="home flex_center">
+            <div class="flex_center home">
                 <div class="home_item">
                     <div class="home_text">
                         <p> Our Delicious Menu Make You Smile</p>
@@ -151,6 +163,361 @@
         </div>
     </section>
 <!-- for About end -->
+
+<!--    menu section start-->
+<section class="menu-section" id="menu">
+
+    <div class="menu-container">
+
+        <div class="row">
+            <div class="section-title">
+                <h2>Our Service</h2>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-tabs">
+
+                <button type="button" class="menu-tab-item"  id="foodbtn"><i class="fas fa-utensils"></i> Food</button>
+                <button type="button" class="menu-tab-item"  id="cakebtn"><i class="fas fa-pizza-slice"></i> Cake</button>
+                <button type="button" class="menu-tab-item" id="drinkbtn"><i class="fas fa-cocktail"></i> Drink</button>
+
+            </div>
+        </div>
+<!--        Start Menu Items-->
+        <div class="menu-box">
+            <div class="cards" id="food">
+
+        
+                <div class="card-box">
+
+                    <div class="card_image_container">
+                        <img src="./assest/img/menu/1.jpg" class="image">
+                    </div>
+                    <div class="card_content">
+                    <p class="text--medium">
+                        Cheese Burger
+                    </p>
+                    </div>
+                    <div class="card_info">
+                        <p class="text--medium dollor">$8</p>
+                        <button class="cartbtn"><i class="fa fa-cart-plus "></i></button>
+                    </div>
+
+                </div>
+        
+                <div class="card-box">
+
+                     <div class="card_image_container">
+                        <img src="./assest/img/menu/2.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Hawaiian Pizza
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$12</p>
+                    <button class="cartbtn"><i class="fa fa-cart-plus "></i></button>
+                </div>
+
+                </div>
+
+                <div class="card-box">
+
+                    <div class="card_image_container">
+                        <img src="./assest/img/menu/3.jpg" class="image">
+                    </div>
+                    <div class="card_content">
+                         <p class="text--medium">
+                            Fried Salt Crisp Chicken
+                        </p>
+                    </div>
+                    <div class="card_info">
+                        <p class="text--medium dollor">$12</p>
+                         <button class="cartbtn"><i class="fa fa-cart-plus "></i></button>
+                    </div>
+
+                </div>
+
+
+                <div class="card-box">
+
+                    <div class="card_image_container">
+                     <img src="./assest/img/menu/4.jpg" class="image">
+            </div>
+            <div class="card_content">
+                <p class="text--medium">
+                    Nuggets
+                </p>
+            </div>
+            <div class="card_info">
+                <p class="text--medium dollor">$10</p>
+                <button class="cartbtn"><i class="fa fa-cart-plus "></i></button>
+            </div>
+
+        </div>
+
+        <div class="card-box">
+
+            <div class="card_image_container">
+                <img src="./assest/img/menu/5.jpg" class="image">
+            </div>
+            <div class="card_content">
+                <p class="text--medium">
+                     Beef Steak
+                </p>
+            </div>
+            <div class="card_info">
+                <p class="text--medium dollor">$18</p>
+                <button class="cartbtn"><i class="fa fa-cart-plus "></i></button>
+            </div>
+
+        </div>
+
+
+        <div class="card-box">
+
+            <div class="card_image_container">
+                <img src="./assest/img/menu/6.png" class="image">
+            </div>
+            <div class="card_content">
+                <p class="text--medium">
+                    Burbecue
+                </p>
+            </div>
+            <div class="card_info">
+                <p class="text--medium dollor">$21</p>
+                <button class="cartbtn"><i class="fa fa-cart-plus "></i></button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+        <div class="cards" id="cake"> 
+
+        
+            <div class="card-box">
+    
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/cake1.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Cake Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$8</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+    
+            </div>
+            
+            <div class="card-box">
+    
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/cake2.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Cake Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$18</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+    
+            </div>
+    
+    
+            <div class="card-box">
+    
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/cake3.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Cake Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$11</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+    
+            </div>
+
+            <div class="card-box">
+    
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/cake4.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Cake Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$8</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+    
+            </div>
+
+            <div class="card-box">
+    
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/cake5.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Cake Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$8</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+    
+            </div>
+
+            <div class="card-box">
+    
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/cake6.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Cake Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$8888</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+    
+            </div>
+    
+            
+    </div>
+
+        <div class="cards" id="drink">
+
+
+            <div class="card-box">
+
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/drink1.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Drink Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$6</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+
+            </div>
+
+            <div class="card-box">
+
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/drink2.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Drink Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$12</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+
+            </div>
+
+            <div class="card-box">
+
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/drink3.jpg"class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Drink Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$5</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+
+            </div>
+
+            <div class="card-box">
+
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/drink4.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Drink Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$3</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+
+            </div>
+
+
+            <div class="card-box">
+
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/drink5.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Drink Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$18</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+
+            </div>
+
+
+            <div class="card-box">
+
+                <div class="card_image_container">
+                    <img src="./assest/img/menu/drink6.jpg" class="image">
+                </div>
+                <div class="card_content">
+                    <p class="text--medium">
+                        Drink Item
+                    </p>
+                </div>
+                <div class="card_info">
+                    <p class="text--medium dollor">$8</p>
+                    <p class="card_price text-medium"><a href="#"> <i class="fa fa-cart-plus"></i></a></p>
+                </div>
+
+            </div>  
+        </div> 
+    </div> 
+        <!--End Menu Items-->
+
+    </div>
+</section>
+<!--Menu Section End-->
 
 <!-- for feedback start -->
     <section class="feecback_section" id="feedback">
@@ -265,12 +632,92 @@
                 </div>
                 <div class="feedback_btn flex_center">
                     <span>You Wanna give feedback?</span>
-                     <button class="feedback_form-btn"> <a href="#feedback"> Form </a></button>
+                     <button class="feedback_form_btn"> 
+                         <a href="#feedback"> Form </a>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 <!-- for feedback end -->
+
+<!-- Star Contact -->
+    <section class="contact_section" id="contact">
+        <div class="container">
+            <div class="contact">
+                <div class="main-heading">
+                    <h1>Contact</h1>
+                </div>
+                <hr/>
+                <div class="contact_item">
+                    <div class="contact-div">
+                        <h2>Opening Hours</h2>
+                        <div class="horsday">
+                            <p>Tues-Fri : 9am-10pm</p>
+                            <p>Sat-Sun : 9am-11pm</p>
+                            <p>Monday : Closed</p>
+                        </div>
+                    <form action="" method="" class="form">
+                        <h2>Make a Suggestion</h2>
+                        <input type="text" name="name" id="name" class="name" placeholder="Name" autocomplete="off" />
+                        <input type="email" name="email" id="email" class="email" placeholder="Email" />
+                        <input type="text" name="msg" id="msg" class="msg" placeholder="Message" />
+            
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    </div>
+            
+                    <div class="map-div">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.9854186434914!2d75.8894558!3d22.765922399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302b0bf93e21d%3A0xf74a240447619115!2s78%2C%20Main%20Rd%2C%20Sector%20A%2C%20Slice%202%2C%20Aranya%20Nagar%2C%20Vijay%20Nagar%2C%20Indore%2C%20Madhya%20Pradesh%20452010%2C%20India!5e0!3m2!1sen!2smm!4v1625663703191!5m2!1sen!2smm" width="400" height="470" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+<!-- End Conatct -->
+
+<!-- Start Footer -->
+    <footer class="footer_section" id="footer">
+        <div class="container">            
+            <div class="footer">
+                <div class="location">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>Themes ground , 78 main road, tow,</a>
+                    <a href="tel:95977644321"><i class="fas fa-phone-alt"></i>+ 95 977644321</a>
+                    <a href="mailto:mkm2021@gmail.com"><i class="fas fa-envelope"></i>mkm2021@gmail.com</a>
+                </div>
+                <div class="navbar_brand flex_center logo">
+                    <a href="#"> MKM </a>
+                </div>
+                <div class="socialapp">
+                    <p>Follow Us On</p>
+                    <div class="social-icon">
+                        <div class="icon flex_center">
+                            <a href="https://www.facebook.com">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                        <div class="icon flex_center">
+                            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="icon flex_center">
+                            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="copy_hr"> </span>
+            <small class="copyright">
+                <span id="year"></span>&copy; Copyright
+            </small>            
+        </div>
+    </footer>
+<!-- End Footer -->
+
+<!-- Min Js File -->
+<!-- <script src="assest/js/form.js"> </script> -->
+<script type="text/javascript" src="assest/js/include.js"> </script>
 <script  type="text/javascript" src="assest/js/custom.js"></script>
+<script  type="text/javascript" src="assest/js/menu.js"></script>
+
 </body>
 </html> 

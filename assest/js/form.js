@@ -27,15 +27,54 @@
             eye.classList.add("fa-eye-slash");
         }
     }
-// <!-- End Password Show / Hide -->
+
 
 // <!-- For Create Acconunt and change Singup form-->    
     let singup_link= document.querySelector(".singup_link");
     let login_form= document.querySelector(".login_form");
     let singup_form= document.querySelector(".singup_form");
-    console.log(singup_link);
+    // console.log(singup_link);
     singup_link.addEventListener("click",()=>{
         login_form.classList.add("d_none");
         singup_form.classList.add("d_block");
     })    
-// <!-- End Create Acconunt and change Singup form-->
+
+
+// Start Change User Account After Create /Login acc
+
+    // From next_form html
+    let login_btn= document.querySelector(".login_btn");    
+    let singup_btn= document.querySelector(".singup_btn");        
+    
+    login_btn.addEventListener("click",( )=>{   
+        let user_name= document.getElementById('user_name');                    
+        let user_pwd= document.getElementById('pwd');     
+        check_item(user_name,user_pwd);
+    })
+
+    singup_btn.addEventListener("click",( )=>{   
+        let user_name= document.getElementById('singup_name');                    
+        let user_pwd= document.getElementById('singup_pwd');  
+        
+        check_item(user_name,user_pwd);
+       
+    })
+
+    function check_item(user_name,user_pwd) {
+        if(user_name.value && user_pwd.value){
+            // change localStorage for perment when next login
+             let name= slice_str(user_name.value);
+             sessionStorage.setItem("user_name", name);       
+             window.history.back();         
+         }else{
+             alert("Please Fill all Request.")
+         }
+    }
+    function slice_str(str) {
+        let space_search=str.search(" "); // return index position        
+        let val= str.slice(0,space_search);
+        console.log(val);
+        return val;
+    }
+
+

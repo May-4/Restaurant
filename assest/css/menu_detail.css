@@ -1,0 +1,149 @@
+:root{
+    --soft-pink:rgb(238, 203, 209);
+}
+
+.menu_detail_section{ 
+    width:100%; font-size: 20px;    
+    background-color: rgb(243, 239, 239);
+    background-image: url('../img/menu/Drink/mocha_crerry.png');
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.menu_detail{ padding:50px; }lo
+
+.menu_detail_navbar{ 
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
+}
+.menu_detail_navbar span{ 
+    margin:0 5px; cursor: pointer;
+}
+
+.previous_link:hover{ color:var(--pink); }
+.previous_link:active{color: var(--soft-pink); }
+.current_link{ color:var(--pink);}
+
+/* Start Menu_detail Card */
+.scale_1{ transform: scale(1); }
+.scale_1:active{ transform: scale(.9);}
+
+.menu_detail_all_card{
+    padding:50px 0;
+}
+.menu_card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu_detail_card{ 
+    width:49%;
+    border-radius: 20px;
+    padding: 20px; margin-bottom: 1rem;
+    align-items: flex-start !important;
+    background-color: rgba(236, 230, 233, 0.52) ; 
+    backdrop-filter:blur(25px);  transform: scale(1);
+}
+.menu_detail_card:hover{
+    transform: scale(1.05);
+}
+.menu_detail_left { 
+    width: 35%; position: relative;
+}
+.menu_detail_right { width:65%;}
+
+/* End Menu_detail Card */
+
+/* Start Menu Left */
+
+    .menu_img{ 
+        width: 150px;
+        height: 150px;
+        background: var(--pink);
+        border-radius: 50%;
+        text-align: center;
+    }
+    .menu_img img{     }
+    .menu_add_number{  
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-center;
+        margin-top: 20px;
+    }
+    .menu_addIcon{
+        margin:0 20px;
+        cursor:pointer;
+     }
+    .menu_number{ }
+    .menu_number input{ 
+        width:60px; padding:5px;
+        text-align: center;
+        background-color: transparent;
+        border:1px solid var(--text-black-900);
+        outline: none;
+    }
+
+/* End Menu Left */
+
+/* Start Menu Right */
+.flex_between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mt_1{
+    margin-top: .4em;
+}
+.mt_2{
+    margin-top: 0em;
+}
+
+.menu_detail_right{ 
+    padding:0 10px;
+ }
+.menu_name{
+    font-weight: bold; 
+    font-size: 20px;
+ }
+ .menu_name p{ font-weight: normal;}
+ .menu_announce{ 
+    font-size: 12px;
+    background-color: var(--soft-pink);;
+    color: var(--pink);
+    border-radius: 5px;
+    padding:5 10px;
+ }
+
+.menu_detail_text {
+    font-size: 16px;
+    color: var(--text-black-700);
+    text-indent: 1rem;
+    line-height: 1.3;
+    width: 100%;
+    height: 125px;
+ }
+.menu_detail_text p{
+   
+}
+.menu_detail_instock{  }
+.menu_detail_price{ }
+
+.menu_detail_stock{
+    color:var(--pink);
+    font-weight: bold;
+    font-size: 16px;
+ }
+
+ .discount_price span:first-child{
+     text-decoration: line-through var(--pink);
+     margin-right: 1em;
+     color:var(--text-black-700);
+ }
+ .discount_price span:last-child{
+    font-weight: bold;
+ }
+
+/* EndMenu Right */

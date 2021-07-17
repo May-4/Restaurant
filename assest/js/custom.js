@@ -69,15 +69,27 @@ console.log("a");
     } // Slide
 
 
-// Feedback Form Alert
-    let feedback_btn= document.querySelector(".feedback_form_btn");
-    feedback_btn.addEventListener("click",()=>{
-        let aa=confirm("are you sure");
-    });
-
-// Show User Acc  when Login Btn Click 
-
-// Add Data to Copyrigt
-const year=document.getElementById("year");
-year.textContent= new Date().getFullYear();
+// Add Data to Copyrigt in Footer Page
+    const year=document.getElementById("year");
+    year.textContent= new Date().getFullYear();
    
+// top btn
+    // Add topbtn
+    var mybutton = document.getElementById("mybtn");
+
+    window.onscroll = function() {
+    scrollFunction()
+    };
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    };
+
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    };

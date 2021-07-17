@@ -25,6 +25,14 @@
         background: linear-gradient(rgba(155, 148, 148, 0.5), rgba(107, 100, 100, 0.5)), url("../img/home/home_bg_2.jpg");
         background-size: cover;         
     }
+    .image{
+        width:50%;height: 600px;
+        background-color: aquamarine;
+    }
+    .image img{
+        width:150px; height:150px;
+    }
+    
 </style>
 <body>
     <section class="login_form flex_center">
@@ -34,17 +42,20 @@
                     <div class="wrapper">
                         <div class="login_text">  Welcome </div>
                         <div class="input_wrap ">
-
-                            <input type="text" 
+                            <input type="text" id="user_name"
                                  placeholder="User_name or Email:">
+
                             <div class=" flex_center" id="password">
-                                <input type="password" placeholder="Password" id="pwd">
+                                <input type="password" 
+                                 placeholder="Password" id="pwd">
                                 <span id="eye">
                                     <i class="fa fa-eye-slash"> </i>
                                 </span>
                             </div>
+
                             <button class="login_btn">
                                  <a href="#"> Login </a>
+                                 <!-- Login -->
                             </button>
                             <p class="forgot_text"> 
                                 <a href="#"> <small> Forgot your password? </small></a>
@@ -56,15 +67,16 @@
                             <p>
                                 Don't Have an account? 
                                 <span class="singup_link">
-                                    <a href="#"> <small>
-                                        Create account.  </small>
-                                    </a>
+                                    <!-- <a href="#"> -->
+                                        <small>
+                                            Create account.  
+                                        </small>
+                                    <!-- </a> -->
                                 </span>
                             </p>
                         </div>
                     </div>
-                </form>
-                    
+                </form>                    
             </div>
         </div>
     </section>
@@ -75,8 +87,8 @@
                     <div class="wrapper">
                         <div class="singup_text"> Create an account</div>
                         <div class="input_wrap ">
-                            <input type="text" placeholder="Full Name:" >
-                            <input type="email" placeholder="Email:">
+                            <input type="text" id="singup_name" placeholder="Full Name:" >
+                            <input type="email" id="singup_email" placeholder="Email:">
                             <div class=" flex_center" id="password">
                                 <input type="password" placeholder="Password" id="singup_pwd">
                                 <span id="singup_eye">
@@ -84,13 +96,14 @@
                                 </span>
                             </div>
                             <div class=" flex_center terms">
-                                <input type="checkbox" id="" name="terms">
+                                <input type="checkbox" value="yes" id="" name="terms">
                                 <p>
                                     I accept <span>The Terms and Conditions</span>
                                 </p>
                             </div>
-                            <button class="singup_btn ">
-                                 <a href="../../index.html"> Create  </a>
+                            <button class="singup_btn">
+                                 <a href="#"> Create  </a>
+                                 <!-- Create -->
                             </button>
                         </div>
 
@@ -111,7 +124,7 @@
             </div>
         </div>
     </section>
-
-<script src="../js/form.js" type="text/javascript"></script>
+   
+<script  type="text/javascript" src="../js/form.js"></script>
 </body>
 </html>

@@ -26,9 +26,10 @@ body{
     justify-content: center;
     align-items: center;
 }
-.login_form a, .singup_form a{
+.login_form a, .singup_form a ,.singup_link small{
     text-decoration: none;
     color:#31517A;
+    cursor:pointer;
 }
 #password{
     position: relative !important;

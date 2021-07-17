@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <link rel="stylesheet" href="../css/feedback_form.css">
+</head>
+<body>
+    <section id="feedback_form_section">
+        <div class="container">
+            <div class="feedback_heading">
+                <p> We all try the best with your suggestion or feedback !</p>
+            </div>
+            <div class="feedback_form flex_center">
+                <form action="#" class="form ">
+                    <div class="user_name">
+                        <label for="name"> Name:(optional) </label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="user_phone">
+                        <label for="phone"> Phone number:(optional) </label>
+                        <input type="number" 
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone">
+                    </div>
+                    <div class="user_email">
+                        <label for="email"> Email:(optional) </label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="day">
+                        <label for="visit_time"> Day Visited</label>
+                        <input type="datetime-local" name="" id="">
+                    </div>
+                    <div class="quality">
+                        <label for="food">Food quality:</label>
+                        <div class="type">
+                            <div class="type_item">
+                                <input type="radio" name="food"> 
+                                <span> Excellent</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="food"> 
+                                <span> Good</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="food"> 
+                                <span> Average</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="food"> 
+                                <span> Dissatified</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <label for="service">Speed of Service:</label>
+                        <div class="type">
+                            <div class="type_item">
+                                <input type="radio" name="service"> 
+                                <span> Excellent</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="service"> 
+                                <span> Good</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="service"> 
+                                <span> Average</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="service"> 
+                                <span> Dissatified</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean">
+                        <label for="cleanliness">Cleanliness:</label>
+                        <div class="type">
+                            <div class="type_item">
+                                <input type="radio" name="cleanliness"> 
+                                <span> Excellent</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="cleanliness"> 
+                                <span> Good</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="cleanliness"> 
+                                <span> Average</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="cleanliness"> 
+                                <span> Dissatified</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <label for="price">Price:</label>
+                        <div class="type">
+                            <div class="type_item">
+                                <input type="radio" name="price"> 
+                                <span> Cheap</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="price"> 
+                                <span>Medium</span> 
+                            </div>
+                            <div class="type_item">
+                                <input type="radio" name="price"> 
+                                <span> Expensive</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <label for="comment"> 
+                            Any Comment ,  <br> Suggestion or <br> Questions
+                        </label>
+                        <textarea name="comment" id=""
+                             cols="10" rows="5"></textarea>
+                    </div>
+                    <div class="submit flex_center">
+                        <button class="feedback_btn"> Submit Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        let feedback_btn=document.querySelector(".feedback_btn");
+        feedback_btn.addEventListener("click",()=>{
+            alert("Thank For Your Suggestonn");
+        })
+    </script>
+</body>
+</html>

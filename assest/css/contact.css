@@ -61,14 +61,14 @@ hr{
 	height: 90px;
 }
 
-.form input::placeholder{
-	font-family: 'Courgette', cursive;
+.contact-div .form input::placeholder{
+	/* font-family: 'Courgette', cursive; */
 	padding:10px;
 	color: var(--plchld-col);
 }
 
 .btn{
-	font-family: 'Courgette', cursive;
+	/* font-family: 'Courgette', cursive; */
 	width: 100px;
 	height: 30px;
 	background-color: transparent;
@@ -182,4 +182,26 @@ hr{
     padding-top: 20px;
 	/* background-color: rgba(0,0,0,0.3); */
 }
+
+/*Start btntop */
+#mybtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	font-size: 50px;
+	border: none;
+	outline: none;
+	color: deeppink;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
+
+  #mybtn:hover {
+	color: hotpink;
+  }
+/* End btntop */
+
 

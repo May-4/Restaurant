@@ -1,0 +1,53 @@
+
+
+/* Start HOme Section */
+    .home_section{
+        width: 100%; 
+        height: 100vh;
+        background:url('../img/home/home_bg_2.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position:left center;
+    }
+    .home{
+        height:100vh;
+        justify-content: flex-start !important;
+    }
+    .home_item{
+        line-height: 1.5;
+        text-align: center;
+        height: 30%;
+    }
+
+    .home_text{ margin-bottom: 30px;}
+    .home_text p:first-child{
+        color: var(--text-black-900);
+        font-weight: bold;
+        font-size: 35px;
+    }
+    .home_text p:nth-child(even){
+        color: var(--pink);
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .home_text p:last-child{
+        color: var(--text-black-700);
+    }
+
+    .order_btn{
+        display: inline-block;
+        border: 2px solid var(--pink);
+        padding:10px 20px;
+    }
+    .order_btn a{ font-weight: bold; color:var(--pink);}
+
+    /* for Login btn and Order now Btn */
+    .border_hover:hover{
+        background-color: var(--pink);
+        transition: background-color 1s;
+    }
+    .border_hover:hover a{ color:var(--white);}
+    .border_hover:active {
+        margin-top:-5px;
+    }
+/* End HOme Section */

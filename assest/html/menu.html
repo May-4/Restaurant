@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Icon link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- End Icon link -->
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../css/_common.css">
+    <link rel="stylesheet" href="../css/menu.css">  
+<!-- End Custom Css -->
+    <title>Restaurant</title>    
+</head>
+<body>
+<!-- for Navbar start -->
+    <header class="navbar_section menu_navbar_section">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar_brand flex_center">
+                    <a href="#"> MKM </a>
+                </div>
+                <ul class="navbar_menu flex_center">
+                    <li class="navbar_item ">
+                        <a href="../../index.html#home" class="navbar_link "> Home </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#about" class="navbar_link"> About </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#menu" class="navbar_link active"> Menu </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#feedback" class="navbar_link"> Feedback </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#contact" class="navbar_link">Contact </a>
+                    </li>
+                </ul>
+                <div class="flex_center">
+                    <div class="account flex_center">
+                        <div class="acc_login border_hover ">
+                            <!-- assest/html/next_form.html -->
+                            <a href="next_form.html" class="login"> 
+                                Login 
+                            </a>
+                        </div>
+                        <div class="acc_user d_none ">
+                            <div class="user_img"> 
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <a href="#" class="user">
+                                <!-- May -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <a href="#"> <i class="fa fa-cart-plus"></i></a>
+                        <span class="badge"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- for Navbar end -->
+
+<!-- Menu Section Start -->
+    <section class="menu_section" id="menu"> 
+        <div class="container">
+            <div class="menu">
+            <!-- Start Menu Heading -->
+                <div class="menu_heading">
+                    <h1> Our Delicious and Special Menu</h1>
+                </div>
+            <!-- Start Menu Navbar -->
+                <div class="menu_navbar flex_center">
+                    <div id="food" class="menu_nav_item menu_navbar_active"> 
+                        <img src="../img/menu/Icon/007-burger.png" alt="">
+                        <p> Food </p>
+                    </div>
+                    <div id="cake" class=" menu_nav_item "> 
+                        <img src="../img/menu/Icon/003-cake-slice.png" alt="">
+                        <p> Cake </p>
+                    </div>
+                    <div id="drink" class=" menu_nav_item  "> 
+                        <img src="../img/menu/Icon/001-quentao.png" alt="">
+                        <p> Drink </p>
+                        <span class="badge"> </span>
+                    </div>
+                </div>
+            <!-- Start Menu Cards -->
+                <div class="menu_all_card">
+
+                <!-- Start Food Cards -->
+                    <div class="card food_card d_block" href="#food">
+                        <div class="row flex_center mt_1">
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Food/menu2.png" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Pizza</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $15.49</span>                                           
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Food/menu1.png" alt="">
+                                    </div>
+                                    <!-- <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div> -->
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Appetizer & Salad</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $3 </span>                                           
+                                        </div>
+                                        <!-- <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div> -->
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Food/menu3.png" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Sale </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Korea Fried Chicken</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price discount_price">
+                                            <span> $19.23 </span> 
+                                            <span> $17.30</span>                                          
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row flex_center mt_1">
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Food/menu4.png" alt="">
+                                    </div>
+                                    <!-- <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div> -->
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Pasta</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $3.5 </span>                                           
+                                        </div>
+                                    <!--  <div class="menu_item_stock">
+                                            <span> Out of Stock</span>
+                                        </div> -->
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Food/menu5.jpg" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Rice Tower</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $4.57 </span>                                           
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Food/menu6.png" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Toppokki</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $5.49 </span>                                           
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Out of Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- End Food Cards -->
+
+                <!-- Start Cake Cards -->
+                <div class="card cake_card d_none" href="#cake">
+                    <div class="row flex_center mt_1">
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/fruit-cake.jpg" alt="">
+                                </div>
+                                <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div>
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Fruit Cake </p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/opera-cake.jpg" alt="">
+                                </div>
+                                <!-- <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div> -->
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p>Opera Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/flourless-orange-cake.jpeg" alt="">
+                                </div>
+                                <div class="menu_announce">
+                                    <span> Sale </span>
+                                </div>
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Flourless Orange Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price discount_price">
+                                        <span> $5 </span> 
+                                        <span> $4</span>                                          
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex_center mt_1">
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/caramel-mud-cake.jpeg" alt="">
+                                </div>
+                                <!-- <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div> -->
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Caramel Mud Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $5 </span>                                           
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Out of Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/choc-ripple-cake.jpeg" alt="">
+                                </div>
+                                <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div>
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Choc Ripple Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $1.5 </span>                                           
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/banana-caramel-cake.jpeg" alt="">
+                                </div>
+                                <!-- <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div> -->
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Banana Caramel Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex_center mt_1">
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/red-velvet-cake.jpg" alt="">
+                                </div>
+                               
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Red Velvet Cake </p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/black-forest-cake.jpeg" alt="">
+                                </div>
+                                <!-- <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div> -->
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Black Forest Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/lemon-tea-cake.jpeg" alt="">
+                                </div>
+                                <div class="menu_announce">
+                                    <span> Sale </span>
+                                </div>
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Lemon Tea Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price discount_price">
+                                        <span> $5 </span> 
+                                        <span> $4</span>                                          
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex_center mt_1">
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/amazing-maltesers-cake.jpeg" alt="">
+                                </div>
+                                
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Amazing Maltesers Cake </p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/koala-crisp-mini-cupcakes.jpg" alt="">
+                                </div>
+                                <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div>
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Koala Crisp Mini Cupcakes</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Out Of Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/chocolate-bread-cake.jpg" alt="">
+                                </div>
+                                <!-- <div class="menu_announce">
+                                    <span> Sale </span>
+                                </div> -->
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Chocolate Bread Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price discount_price">
+                                        <span> $5 </span> 
+                                        <span> $4</span>                                          
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex_center mt_1">
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/Mini-Classic-Cheesecakes.jpg" alt="">
+                                </div>
+                                
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Mini Classic Cheesecakes </p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/carrot-cake.jpg" alt="">
+                                </div>
+                                <!-- <div class="menu_announce">
+                                    <span> Popular </span>
+                                </div> -->
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p>Carrot Cake</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price">
+                                        <span> $3 </span>                                           
+                                    </div>
+                                    <!-- <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div> -->
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_card">
+                            <div class="menu_card_top">
+                                <div class="menu_img flex_center">
+                                    <img src="../img/menu/Cake/key-lime-pie.jpg" alt="">
+                                </div>
+                                <div class="menu_announce">
+                                    <span> Sale </span>
+                                </div>
+                                <div class="menu_addIcon scale_1">
+                                    <i class="fas fa-cart-plus"></i>
+                                </div>
+                            </div>
+                            <div class="menu_card_body">
+                                <div class="menu_item_name mt_1">
+                                    <p> Key Lime Pie</p>
+                                </div>
+                                <div class="mt_1 menu_item_instock flex_center">
+                                    <div class="menu_item_price discount_price">
+                                        <span> $5 </span> 
+                                        <span> $4</span>                                          
+                                    </div>
+                                    <div class="menu_item_stock">
+                                        <span> Low Stock</span>
+                                    </div>
+                                </div>
+                                <div class=" mt_2 menu_more ">
+                                    <button class="scale_1 menu_more_btn"> More </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cake Cards -->
+
+                <!-- Start Drink Cards -->
+                    <div class="card drink_card d_none" href="#drink">
+                        <div class="row flex_center mt_1">
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Drink/mocha_green tea.png" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Green Tea Mocha</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $3 </span>                                           
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn" id="mocha"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Drink/cocktail_color.png" alt="">
+                                    </div>
+                                    <!-- <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div> -->
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> ColorFul Hawii</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $3 </span>                                           
+                                        </div>
+                                        <!-- <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div> -->
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Drink/drink_strawberry.png" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Sale </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Strawberry Bubble</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price discount_price">
+                                            <span> $5 </span> 
+                                            <span> $4</span>                                          
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row flex_center mt_1">
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Drink/sunrise_cocktail.png" alt="">
+                                    </div>
+                                    <!-- <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div> -->
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Sirise Cocktail</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $5 </span>                                           
+                                        </div>
+                                        <div class="menu_item_stock">
+                                            <span> Out of Stock</span>
+                                        </div>
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_card">
+                                <div class="menu_card_top">
+                                    <div class="menu_img flex_center">
+                                        <img src="../img/menu/Drink/drink_orange.png" alt="">
+                                    </div>
+                                    <div class="menu_announce">
+                                        <span> Popular </span>
+                                    </div>
+                                    <div class="menu_addIcon scale_1">
+                                        <i class="fas fa-cart-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="menu_card_body">
+                                    <div class="menu_item_name mt_1">
+                                        <p> Orange Juice</p>
+                                    </div>
+                                    <div class="mt_1 menu_item_instock flex_center">
+                                        <div class="menu_item_price">
+                                            <span> $1.5 </span>                                           
+                                        </div>
+                                        <!-- <div class="menu_item_stock">
+                                            <span> Low Stock</span>
+                                        </div> -->
+                                    </div>
+                                    <div class=" mt_2 menu_more ">
+                                        <button class="scale_1 menu_more_btn"> More </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                <!-- End Drink Cards -->
+
+                </div>
+            <!-- End Menu Cards -->
+            
+            </div>
+        </div>
+    </section>
+<!--End Menu Section Start -->
+    <script src="../js/changeAcc.js"> </script>
+    <script src="../js/menu.js"> </script>
+</body>
+</html>

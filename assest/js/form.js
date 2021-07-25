@@ -63,18 +63,23 @@
     function check_item(user_name,user_pwd) {
         if(user_name.value && user_pwd.value){
             // change localStorage for perment when next login
-             let name= slice_str(user_name.value);
-             sessionStorage.setItem("user_name", name);       
-             window.history.back();         
+            let name= slice_str(user_name.value);
+            sessionStorage.setItem("user_name", name);       
+            window.history.back();         
          }else{
              alert("Please Fill all Request.")
          }
     }
     function slice_str(str) {
-        let space_search=str.search(" "); // return index position        
-        let val= str.slice(0,space_search);
-        console.log(val);
-        return val;
+        let space_search=str.search(" "); // return index position 
+        let val;
+        
+        if(space_search== -1){
+            return val= str.slice(0,str.length); 
+        }
+        return val=str.slice(0,space_search);
+        
+        
     }
 
 

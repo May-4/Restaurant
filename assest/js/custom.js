@@ -1,11 +1,15 @@
-console.log("a");
+
+
 // show Navbar when scroll reach about page
     window.addEventListener("scroll",()=>{
         let navbar= document.querySelector(".navbar_section");
+        let detail =document.querySelector(".acc_detail");
         if(window.pageYOffset >= window.outerHeight-200){
             navbar.classList.add("position_fixed");
+            detail.classList.add("acc_detail_white");
         }else{
             navbar.classList.remove("position_fixed");
+            detail.classList.remove("acc_detail_white");
         }
     })
 
@@ -41,9 +45,10 @@ console.log("a");
                 active_link(link);// အပေါ်မှာ ရေးထားတဲ့ function
             }
 
-            // console.log(`${get_id} is context height = ${offset_height}
-            // and distance from top is = ${offset_top}!! 
-            // And Current scroll is= ${offsetY-300}`);
+            /*  console.log(`${get_id} is context height = ${offset_height}
+             and distance from top is = ${offset_top}!! 
+             And Current scroll is= ${offsetY-300}`); */   
+             
 
         });
     } 
@@ -68,7 +73,7 @@ console.log("a");
         }
     } // Slide
 
-
+    
 // Add Data to Copyrigt in Footer Page
     const year=document.getElementById("year");
     year.textContent= new Date().getFullYear();
@@ -78,9 +83,8 @@ console.log("a");
     var mybutton = document.getElementById("mybtn");
 
     window.onscroll = function() {
-    scrollFunction()
+        scrollFunction()
     };
-
     function scrollFunction() {
     if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
         mybutton.style.display = "block";
@@ -88,7 +92,6 @@ console.log("a");
         mybutton.style.display = "none";
     }
     };
-
     function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

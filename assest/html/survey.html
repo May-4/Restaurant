@@ -12,6 +12,7 @@
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="../css/_common.css">
+    <link rel="stylesheet" href="../css/mini_cart.css">
     <link rel="stylesheet" href="../css/survey.css"> 
 
     <title>Restaurant Survey</title>   
@@ -19,7 +20,7 @@
 <body>
 
 <!-- for Navbar start -->
-    <header class="navbar_section">
+    <header class="navbar_section menu_navbar_section">
         <div class="container">
             <div class="navbar">
                 <div class="navbar_brand flex_center">
@@ -27,16 +28,16 @@
                 </div>
                 <ul class="navbar_menu flex_center">
                     <li class="navbar_item ">
-                        <a href="../../index.html#home" class="navbar_link"> Home </a>
+                        <a href="../../index.html#home" class="navbar_link "> Home </a>
                     </li>
                     <li class="navbar_item">
                         <a href="../../index.html#about" class="navbar_link"> About </a>
                     </li>
                     <li class="navbar_item">
-                        <a href="../../index.html#menu" class="navbar_link"> Menu </a>
+                        <a href="../../index.html#menu" class="navbar_link active"> Menu </a>
                     </li>
                     <li class="navbar_item">
-                        <a href="../../index.html#feedback" class="navbar_link active"> Feedback </a>
+                        <a href="../../index.html#feedback" class="navbar_link"> Feedback </a>
                     </li>
                     <li class="navbar_item">
                         <a href="../../index.html#contact" class="navbar_link">Contact </a>
@@ -46,7 +47,7 @@
                     <div class="account flex_center">
                         <div class="acc_login border_hover ">
                             <!-- assest/html/next_form.html -->
-                            <a href="assest/html/next_form.html" class="login"> 
+                            <a href="next_form.html" class="login"> 
                                 Login 
                             </a>
                         </div>
@@ -54,20 +55,158 @@
                             <div class="user_img"> 
                                 <i class="fa fa-user"></i>
                             </div>
-                            <a href="#" class="user">
+                            <span class="user" >
                                 May
-                            </a>
+                            </span>
+                            <div class="dropdown_icon">
+                                <!-- <a href="#"> -->
+                                    <i class="fas fa-caret-down"> </i>
+                                <!-- </a>                                 -->
+                            </div>
+                            <ul class="acc_detail acc_detail_white d_none hide_menu">
+                                <li >
+                                    <a href="cart_table.html"> My Order </a>
+                                </li>
+                                <li> Change Password</li>
+                                <li class="logout"> Logout</li>
+                            </ul>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="cart">
-                        <a href="#"> <i class="fa fa-cart-plus"></i></a>
-                        <span class="badge"> </span>
-                    </div>
+                        <a href="#" class="cart_icon"> 
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge"></span>
+                        </a>
+                    </div>                   
+                    
                 </div>
             </div>
         </div>
     </header>
 <!-- for Navbar end -->
+
+<!-- for Mini Cart start -->
+    <div class="mini_cart_page hide_menu d_none">
+        <div class="mini_cart_wrapper">
+            <div class=" mini_cart_header flex_between">
+                <p> Shopping Cart</p>
+                <span> 
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <hr class="mini_cart_line">
+            <div class="mini_cart_content">
+                <ul class="mini_cart_items_list">
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu10.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Korea Fried Chickken </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu14.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Cheese Piza </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu4.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Appetizer and Salad </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu1.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Appetizer and Salad </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <hr class="mini_cart_line">
+                <div class="subtotal flex_between">
+                    <h4> Subtotal </h4>
+                    <div class="total_amount">
+                        <span class="dollar_sign"> $</span>
+                        <span class="total_amount"> 
+                            5
+                        </span>
+                    </div>
+                </div>
+                <hr class="mini_cart_line">
+                <div class="mini_cart_btn">
+                    <div class="btn view_cart_btn"> 
+                        <a href="cart_table.html"> View Cart </a>
+                    </div>
+                    <div class="btn checkout_cart_btn"> 
+                        <a href="checkout.html">Checkout </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="no_item d_none">
+            There is no item
+        </div>
+    </div>
 <!-- Start Survey Form -->
 
      <div class="survey-container flex_center" id="survey">
@@ -157,7 +296,11 @@
         <a href="../../index.html#feedback">Back Home</a>
     </div>
 
+    <script src="../js/badge_count.js"> </script>
     <script src="../js/changeAcc.js"> </script>
+    <script src="../js/dropdown_acc.js"> </script>
+    <script src="../js/mini_cart.js"></script>
+
     <script src="../js/survey.js"> </script>
 </body>
 </html>

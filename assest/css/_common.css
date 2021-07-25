@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&family=Raleway:ital,wght@0,100;0,300;0,500;0,600;0,800;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300;400;600&family=Zen+Tokyo+Zoo&display=swap');
 /* for all Element */
-
+    
     html{
         width:100%;
         overflow-x:hidden;
@@ -56,9 +56,12 @@
                         -2px -2px 5px var(--bg-black-50);
         --inner-shadow:inset 2px 2px 5px var(--bg-black-50),
                         inset -2px -2px 5px var(--bg-black-50);
+        --green: #39ad68;
     }
 
-    
+    .bg_green{
+        background-color: var(--green);
+    }
 /* Navbar Section */
 
     .navbar_section{
@@ -112,36 +115,85 @@
     }
     .login{  color:var(--white);  }
     .user_img{
-        border: 1px solid var(--black);
+        border: 1px solid transparent;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         display: inline-block;
         margin-right: 5px;
         text-align: center;
-        background-color: var(--text-black-900);
+        background-color: var(--bg-black-50);
     }
     .user_img i{
         line-height: 2;
-        color: var(--bg-black-50);
+        color: var(--text-black-700);
     }
+    .acc_user .user{ font-weight: bold; cursor: pointer;}
+    
 
     .cart{
         border-left: 1px solid var(--black);
         border-right: 1px solid var(--black);
         margin:0px 10px;
         padding:0px 20px;
-        position:relative;
     }
+    .cart_icon{ position:relative; }
     .cart i{ color:var(--pink);}
     .cart:active i{ color:var(--text-black-900)}
 
     .badge{
         position: absolute;
         padding:2px;
-        top:-18px;
+        top:10px;
         font-size: 14px;
         font-weight: bold;
     }
-
+    .menu_navbar_section .badge{
+        top:-18px;
+    }
 /* End Navbar Section */
+
+/* DropDown Acc Menu */
+    .acc_user{
+        background: var(--pink);
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .dropdown_icon{ padding:0 5px; cursor: pointer;}
+    .dropdown_icon i{ color:var(--bg-black-50);}
+
+    .acc_detail{
+        position: absolute;
+        top:80px; 
+        padding:20px;
+        background: #f19370f3;
+        backdrop-filter: blur(30px);
+    }
+    .acc_detail li{ 
+        color:var(--text-black-700);
+        padding: 10px; cursor: pointer;
+        font-size: 18px;
+    }
+    .acc_detail li:hover{
+        background: #fa715c;
+        color:white;
+        border-radius: 10px;
+    }
+
+/* Position Fixed  */
+.position_fixed{
+    position: fixed;
+    background-color: var(--white);
+    box-shadow: var(--outer-shadow);
+}
+.acc_detail_white{
+        background: var(--pink);
+    }
+.acc_detail_white li{
+        color:var(--white);
+    }
+.acc_detail_white li:hover{
+        background: lightcoral;
+        backdrop-filter: blur(20px);
+        color:var(--text-black-900);
+    }

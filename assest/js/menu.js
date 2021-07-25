@@ -4,7 +4,13 @@
     mocha_btn.addEventListener("click",()=>{
         window.location.href="menu_detail.html";
     })
-
+// Change Dollar($) to Kyat symbol(K)
+    window.addEventListener("load",()=>{
+        let dollars= document.querySelectorAll(".dollar_sign");
+        dollars.forEach(dollar=>{
+            dollar.innerHTML="K";
+        })
+    })
 // Active And Change Page When Click menu navbar
     let nav_items= document.querySelectorAll(".menu_nav_item");
     nav_items.forEach(item=>{
@@ -37,20 +43,26 @@
         get_href.classList.add("d_block");
     }
     
-// Check login_in and Count cart when icon is click
-    let user_name = sessionStorage.getItem("user_name");
-
-    let badge =document.querySelector(".badge");
-    let addIcons= document.querySelectorAll(".menu_addIcon");
-    count=1;
-    addIcons.forEach(addIcon=>{ 
-        addIcon.addEventListener("click",(event)=>{
-            if(!user_name){
-                alert(" Please Login for your order");
-                return;
-            }
-            badge.innerHTML= count++;                
+//  Show Mini Cart  page when click fas-cart-plus
+    function toShow_miniCart(){
+        let add_icons =document.querySelectorAll(".menu_addIcon");
+        add_icons.forEach( add_icon=>{
+            add_icon.addEventListener("click",()=>{                
+                if(sessionStorage.getItem("user_name")){
+                    check_count();
+                }             
+            })
         })
-    })
- 
+        function check_count(){
+            let mini_cart_wrap= document.querySelector(".mini_cart_wrapper");
+            let no_item= document.querySelector(".mini_cart_page> .no_item");
+                
+            mini_cart_wrap.classList.remove("d_none");
+            mini_cart_wrap.classList.add("d_block");
+            no_item.classList.add("d_none");   
+            
+        }
+    }
+    toShow_miniCart()
     
+   

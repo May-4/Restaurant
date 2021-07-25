@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+    <link rel="stylesheet" href="../css/_common.css">
+    <link rel="stylesheet" href="../css/cart_table.css">
+</head>
+<body>
+<!-- for Navbar start -->
+    <header class="navbar_section menu_navbar_section">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar_brand flex_center">
+                    <a href="#"> MKM </a>
+                </div>
+                <ul class="navbar_menu flex_center">
+                    <li class="navbar_item ">
+                        <a href="../../index.html#home" class="navbar_link "> Home </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#about" class="navbar_link"> About </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#menu" class="navbar_link "> Menu </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#feedback" class="navbar_link"> Feedback </a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="../../index.html#contact" class="navbar_link">Contact </a>
+                    </li>
+                </ul>
+                <div class="flex_center">
+                    <div class="account flex_center">
+                        <div class="acc_login border_hover ">
+                            <!-- assest/html/next_form.html -->
+                            <a href="next_form.html" class="login"> 
+                                Login 
+                            </a>
+                        </div>
+                        <div class="acc_user d_none ">
+                            <div class="user_img"> 
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <span class="user" >
+                                May
+                            </span>
+                            <div class="dropdown_icon">
+                                <!-- <a href="#"> -->
+                                    <i class="fas fa-caret-down"> </i>
+                                <!-- </a>                                 -->
+                            </div>
+                            <ul class="acc_detail acc_detail_white d_none hide_menu">
+                                <li >
+                                    <a href="#"> My Order </a>
+                                </li>
+                                <li> Change Password</li>
+                                <li class="logout"> Logout</li>
+                            </ul>
+                        </div>
+                    </div>                    
+                    <div class="cart">
+                        <a class="cart_icon"> 
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge"></span>
+                        </a>
+                    </div>                   
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- for Navbar end -->
+
+<!-- for Cart Table start -->
+    <section class="cart_table_section " id="cart_table">
+        <div class="cart_table_navbar">
+            <span class="cart_previous_link"> 
+                <a href="menu.html">Menu</a>
+            </span>
+            <span> <i class="fas fa-angle-double-right"></i> </span>
+            <span class="cart_current_link"> Cart </span>
+        </div>
+        <div class="container">
+            <div class="cart_table">
+                <form class="cart_table_form" action="">
+                    <p class="cart-page-title">Your cart items</p>
+                    <table class="shop_table" cellspacing="0">
+                        <thead>
+                            <tr class="product_header">
+                                <th class="product_thumbnail">Image</th>
+                                <th class="product_name">Product Name</th>
+                                <th class="product_price">Until Price</th>
+                                <th class="product_quantity">Qty</th>
+                                <th class="product_subtotal">Subtotal</th>
+                                <th class="product_remove">Action</th>
+                            </tr>
+                        </thead>
+                       <tbody>
+                            <!-- <tr class="product_detail">
+                                <td  class="product_thumbnail">
+                                    <img src="../img/menu/cake/amazing-maltesers-cake.jpeg" alt="">
+                                </td>
+                                <td  class="product_name">
+                                    <p> Maltesers</p>
+                                </td>
+                                <td  class="product_price">
+                                    <p class="amount">
+                                        <span class="dollar">$</span>
+                                        <span class="amount_value"> 10</span>
+                                    </p>
+                                </td>
+                                <td  class="product_quantity">
+                                    <p class="quantity"> 
+                                        <input type="number" value="1" 
+                                        min="1" max="50" id="">
+                                    </p>
+                                </td>
+                                <td  class="product_subtotal">
+                                    <p class="subtotal">
+                                        <span class="dollar">$</span>
+                                        <span class="amount_value"> 10</span>
+                                    </p>
+                                </td>
+                                <td  class="product_remove">
+                                    <p class="close_btn"> 
+                                        <i class="fas fa-close">close</i>
+                                    </p>
+                                </td>
+                            </tr>  -->
+                       </tbody>
+                       <tfoot>
+                           <tr>
+                               <td colspan="2"></td>
+                               <td colspan="3">
+                                    <div class="allTotal">
+                                        <div class="allSubtotal">
+                                            <p> Subtotal</p>
+                                            <p class="">
+                                                <span class="dollar">$</span>
+                                                <span class="amount_value"> 10</span>
+                                            </p>
+                                        </div>
+                                        <div class="tax">
+                                            <p> Tax</p>
+                                            <p class="">
+                                                <span class="dollar">$</span>
+                                                <span class="amount_value"> 50</span>
+                                            </p>
+                                        </div>
+                                        <hr>
+                                        <div class="total">
+                                            <p> Total</p>
+                                            <p class="">
+                                                <span class="dollar">$</span>
+                                                <span class="amount_value"> 150</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td colspan="2"> </td>
+                               <td colspan="3"> 
+                                   <div class="checkout_btn">
+                                       <a href="checkout.html"> Proceed to Checkout</a>
+                                   </div>
+                               </td>
+                           </tr>
+                       </tfoot>
+                    </table>    
+                    <div class="no_item_msg d_none">
+                        <h1> Your Cart Has No Items</h1>
+                    </div>            
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- for Cart Table start -->
+
+    <script src="../js/badge_count.js"> </script>
+    <script src="../js/dropdown_acc.js"> </script>
+    <script src="../js/logout_table.js"> </script>
+
+    <script src="../js/mini_cart.js"> </script>
+    <script src="../js/cart_table.js"></script>
+</body>
+</html>

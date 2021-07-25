@@ -36,11 +36,12 @@
                 
                 sessionStorage.removeItem("user_name");
 
+                remove_itemData()
+
                 login_acc.classList.remove("d_none");
                 user_acc.classList.remove("flex_center");
                 user_acc.classList.add("d_none");
-
-                remove_itemData()
+                
 
             }
         })
@@ -59,38 +60,24 @@
             sessionStorage.removeItem("cart_item_data");
             sessionStorage.removeItem("cart_get_poc");
 
-            // remove_table(badge_get)
-            remove_badge_count(badge_get)
-            remove_check_icon()
+            remove_table(badge_get)
             
         }    
         
     }
-   
-    function remove_badge_count(badge_get){
-        let mini_cart_wrap= document.querySelector(".mini_cart_wrapper");
-        let no_item= document.querySelector(".mini_cart_page> .no_item");
-        
-        if( !sessionStorage.getItem("badge_count")){
-            mini_cart_wrap.classList.add("d_none");
-            no_item.classList.remove("d_none");
-            no_item.classList.add("d_block");         
-        }
-        badge_get.innerHTML="";
-    } remove_badge_count();
+    function remove_table(badge_get){
+        // let cart_item= sessionStorage.getItem("badge_count");
+        // if(!cart_item){
+            badge_get.innerHTML="";
+            let table =document.querySelector(".shop_table");
+            let msg= document.querySelector(".no_item_msg");
 
-    function remove_check_icon(){
-        let cart_icons=document.querySelectorAll(".menu_addIcon> i");
-        cart_icons.forEach(icon => {
-            let circle= icon.classList.contains("fa-check-circle");
-            if(circle){
-                icon.classList.remove("fa-check-circle");
-                icon.classList.add("fa-cart-plus");
-            }
-        });
+            table.classList.remove("d_table");
+            table.classList.add("d_none");
+            msg.classList.remove("d_none");
+            msg.classList.add("d_flex");
+
+            window.location.href="../../index.html";
+        // }
+        // console.log(cart_item+"remove_table");
     }
-   
-
-
-
-    

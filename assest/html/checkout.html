@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Out</title>
+<!--    bootstrap css1 js2-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../css/_common.css">
+    <link rel="stylesheet" type="text/css" href="../css/checkout.css">
+
+    <!-- Icon link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- End Icon link -->
+</head>
+
+<body>
+
+    <div class="container-fluid">
+      <p class="ptop">Free shipping on orders $35 and up</p>
+    </div>
+    <div class="container">
+        <div class="cart_table_navbar text-center mb-3">
+            <span class="cart_previous_link"> 
+                <a href="menu.html">Menu</a>
+            </span>
+            <span> <i class="fas fa-angle-double-right"></i> </span>
+            <span class="cart_table_previous_link"> 
+            <a href="cart_table.html">Cart</a> 
+            </span>
+            <span> <i class="fas fa-angle-double-right"></i> </span>
+            <span class="cart_current_link active"> Checkout </span>
+        </div>
+
+        <div class="img">
+            check out
+        </div>
+        <p>Need Help ? Call <a href="tel:95977644321"><i class="fas fa-phone-alt"></i>+ 95 977644321</a></p>
+
+        <div class="row m-4">
+           <div class="col-lg-7 col-sm-12 border p-4 me-5 mb-3">
+               <form action="" method="">
+                   <h1>Shipping</h1>
+                   <label for="email">* Email</label>
+                   <input type="eamil" name="email" id="email" class="form-control rounded-0" autocomplete="off" required/>
+
+                   <input type="checkbox" name="agree" id="agree" class="" value="agree"/>
+                   <label>Sign me up to be one of the first to know about exciting product updates and more..</label>
+
+                   <div class="row mt-4">
+                       <div class="col-lg-6 col-sm-6">
+                           <label for="firstname">* First Name</label>
+                           <input type="text" name="firstname" id="firstname" class="form-control rounded-0" placeholder="Enter your firstname" required/>
+                       </div>
+
+                       <div class="col-lg-6 col-sm-6">
+                           <label for="lastname">* Last Name</label>
+                           <input type="text" name="lastname" id="lastname" class="form-control rounded-0" placeholder="Enter your lastname" required />
+                       </div>
+                   </div>
+                   <label for="address1" class="mt-4">* Address 1</label>
+                   <input type="text" name="address1" id="address1" class="form-control rounded-0" required />
+
+                   <label for="address2" class="mt-4">Addresss 2</label>
+                   <input type="text" name="address2" id="address2" class="form-control rounded-0" required />
+
+                  <div class="row mt-4">
+                      <div class="col-lg-6 col-sm-6">
+                          <label for="country">* Country</label>
+                          <select name="country" id="country" class="form-select form-select-sm rounded-0">
+                              <option disabled selected>Choose Country</option>
+                              <option value="mm">Myanmar</option>
+                              <option value="th">Thailand</option>
+                              <option value="jpn">japan</option>
+                              <option value="indo">Indonesia</option>
+                          </select>
+                      </div>
+
+                      <div class="col-lg-6 col-sm-6">
+                          <label for="state">* State</label>
+                          <select name="state" id="state" class="form-select form-select-sm rounded-0">
+                              <option disabled selected>Select</option>
+                              <option value="mdy">Mandalay</option>
+                              <option value="pk">Phuket</option>
+                              <option value="osk">Osaka</option>
+                              <option value="in">Indo</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row mt-4">
+                      <div class="col-lg-6 col-sm-6">
+                         <label for="city">* City</label>
+                         <input type="text" name="city" id="city" class="form-control rounded-0" required />
+                      </div>
+
+                      <div class="col-lg-6 col-sm-6">
+                          <label for="zip">* Zip Code</label>
+                          <input type="text" name="zip" id="zip" class="form-control rounded-0" required />
+                          <label>Example: 12345</label>
+                      </div>
+                  </div>
+
+                   <label for="ph" class="mt-4">* Phone Number</label>
+                   <input type="text" name="ph" id="ph" class="form-control rounded-0" required />
+                   <label>Example:+ 95 977644321</label>
+
+                   <div class="ship mt-4">
+                       <label class="mt-3">Shipping Method</label>
+                       <div class="form-check mt-2">
+                           <input type="radio" name="shipmethod" id="shipmethod" class="form-check-input" value="1" /><label  for="shipmethod1">Standard (arrives within 8 business days)..................................................................
+                           $6.99</label>
+                       </div>
+                       <div class="form-check mt-2">
+                           <input type="radio" name="shipmethod" id="shipmethod" class="form-check-input" value="0" /><label  for="shipmethod2">Expedited (arrives within 4 business days)................................................................
+                           $9.99</label>
+                       </div>
+                   </div>
+               </form>
+           </div>
+            <div class="col-lg-4 col-sm-12 pr-3">
+               <div class="row text-center border pt-3 pb-3">
+                   <div class="col-lg-6 col-sm-6">
+                       <label>Promo Code</label>
+                       <input type="text" name="procode" id="procode" class="form-control rounded-0 m-3" placeholder="Promo Code"/>
+                   </div>
+
+                   <div class="col-lg-5 col-sm-5">
+                       <label class="hideaa">aa</label>
+                       <input type="submit" name="submit" id="submit" class="form-control btn btn-danger m-3" placeholder="Submit"/>
+                   </div>
+
+               </div>
+               <div class="row text-center border pt-3 pb-3 mt-3">
+                   <div class="col-lg-6 col-sm-6 ordersummary">
+                       <h6>Order Summary</h6>
+                       <p>&nbsp;Subtotal......................................$11.99</p>
+                       <p>&nbsp;Shipping.....................................$9.99</p>
+                       <p>&nbsp;Tax................................................$0.00</p>
+                       <h5>&nbsp;&nbsp;&nbsp;Total..............................$21.98</h5>
+                   </div>
+               </div>
+               <div class="row text-center border pt-3 mt-3">
+                   <div class="col-lg-6 col-sm-6 item">
+                       <h5>Items.................................$5.49</h5>
+                       <p>Toppokki</p>
+                       <img src="../img/checkout/menu6.png" width="150px"/>
+                       <div class="row">
+                           <div class="col-lg-10 col-sm-7">
+                               <p>Quantity</p>
+                               <p>1</p>
+                           </div>
+                           <div class="col-lg-1 col-sm-6">
+                               <p>Total</p>
+                               <p>$5.49</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+           <div class="col-lg-7 col-sm-12 border mt-3">
+              <p>Payment</p>
+           </div>
+            <button class="col-lg-7 col-sm-12 btn btn-danger mt-3 mb-2" data-bs-toggle="modal" data-bs-target="#paymentmodal">Next: Payment</button>
+        </div>
+
+    </div>
+
+<!-- Start Modal Area -->
+  <!--start login modal-->
+    <div class="modal" id="paymentmodal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Payment Method</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <form action="" method="">
+                                <input type="radio" name="paymethod" id="card_radio" class="form-check-input" checked value="card" />
+                                <label for="card_radio"><img src="../img/checkout/card.png" alt="card" height="30px"></label>
+
+                                <input type="radio" name="paymethod" id="paypal_radio" class="form-check-input" value="paypal" />
+                                <label for="paypal_radio"><img src="../img/checkout/paypal.png" alt="card" height="40px"></label>
+
+                                <!-- start card -->
+                                <div class="form_card"  href="#card">
+                                  <div>
+                                    <h5>Credit Card</h5>
+                                    <div class="row">
+                                      <div class="col-lg-6 mb-2">
+                                        <input type="text" name="firstname1" id="firstname1" class="form-control form-control-sm"/>
+                                        <label for="firstname1">First Name</label>
+                                      </div>
+                                      <div class="col-lg-6 mb-2">
+                                        <input type="text" name="lastname1" id="lastname1" class="form-control form-control-sm"/>
+                                        <label for="lastname1">Last Name</label>
+                                      </div>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-lg-6 mb-2">
+                                        <input type="text" name="crdnumber" id="crdnumber" class="form-control form-control-sm"/>
+                                        <label for="crdnumber">Credit Card Number</label>
+                                      </div>
+                                      <div class="col-lg-6 mb-2">
+                                        <input type="text" name="securitycode" id="securitycode" class="form-control form-control-sm"/>
+                                        <label for="securitycode">Security Code</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-lg-6 mb-2">
+                                      <select name="month" id="month" class="form-select form-select-sm">
+                                          <option disabled selected></option>
+                                          <option value="japan">January</option>
+                                          <option value="feb">February</option>
+                                          <option value="mar">March</option>
+                                          <option value="apl">April</option>
+                                          <option value="may">May</option>
+                                          <option value="jun">June</option>
+                                          <option value="jul">July</option>
+                                          <option value="aug">August</option>
+                                          <option value="sep">September</option>
+                                          <option value="oct">October</option>
+                                          <option value="nov">November</option>
+                                          <option value="dec">December</option>
+                                      </select>
+                                      <label for="month">Expiration Month</label>
+                                    </div>
+
+                                    <div class="col-lg-6 mb-2">
+                                      <select name="year" id="year" class="form-select form-select-sm">
+                                          <option disabled selected></option>
+                                          <option value="21">2021</option>
+                                          <option value="22">2022</option>
+                                          <option value="23">2023</option>
+                                          <option value="24">2024</option>
+                                          <option value="25">2025</option>
+                                          <option value="26">2026</option>
+                                      </select>
+                                      <label for="month">Expiration Month</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end card -->
+
+                                <!-- start paypal  -->
+                                <div class="form_paypal d_none" href="#paypal">
+                                  <div >
+                                    <h5>Byuer Name</h5>
+                                    <div class="row">
+                                      <div class="col-lg-6 mb-3">
+                                        <input type="text" name="firstname2" id="firstname2" class="form-control form-control-lg"/>
+                                        <label for="firstname2">First Name</label>
+                                      </div>
+
+                                      <div class="col-lg-6 mb-3">
+                                        <input type="text" name="lastname2" id="lastname2" class="form-control form-control-lg"/>
+                                        <label for="lastname2">Last Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row mt-4">
+                                    <div class="col-lg-6">
+                                      <h5>Buyer E-mail</h5> 
+                                      <input type="email" name="email" id="email" class="form-control form-control-lg"/>
+                                      <label>example@example.com</label>
+                                    </div>
+                                  </div>   
+                                </div>
+                                <!-- end paypal  -->
+                            
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                      <button class="btn btn-warning rounded-0"><a href="checkout.html">Cancle</a></button>
+                      <button type="submit" class="btn btn-info rounded-0"><a href="checkout.html">Submit</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--End login modal-->
+
+<!--End Modal Area-->
+
+
+<!--bootstrap css1 js2-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+    let card_radio =document.getElementById("card_radio");
+    let paypal_radio= document.getElementById("paypal_radio");
+
+    let form_card= document.querySelector(".form_card");
+    let form_paypal= document.querySelector(".form_paypal");
+    
+    card_radio.addEventListener("click",()=>{
+      form_card.classList.remove("d_none");
+      form_card.classList.add("d_block");
+      form_paypal.classList.add("d_none");
+    })
+   
+    paypal_radio.addEventListener("click",()=>{
+      form_card.classList.add("d_none");
+      form_paypal.classList.remove("d_none");
+      form_paypal.classList.add("d_block");
+    })
+
+</script>
+</body>
+</html>

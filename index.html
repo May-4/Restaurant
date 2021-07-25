@@ -13,6 +13,7 @@
     <!-- Custom Css -->
 <!-- <link rel="stylesheet" href="assest/css/login.css"> -->
     <link rel="stylesheet" href="assest/css/_common.css">
+    <link rel="stylesheet" href="assest/css/mini_cart.css">
     <link rel="stylesheet" href="assest/css/home.css">
     <link rel="stylesheet" href="assest/css/about.css">
     <link rel="stylesheet" href="assest/css/popular_menu.css">
@@ -23,7 +24,7 @@
 </head>
 <body>
 <!-- for Navbar start -->
-    <header class="navbar_section">
+    <header class="navbar_section menu_navbar_section">
         <div class="container">
             <div class="navbar">
                 <div class="navbar_brand flex_center">
@@ -37,7 +38,7 @@
                         <a href="#about" class="navbar_link"> About </a>
                     </li>
                     <li class="navbar_item">
-                        <a href="#menu" class="navbar_link"> Menu </a>
+                        <a href="#menu" class="navbar_link "> Menu </a>
                     </li>
                     <li class="navbar_item">
                         <a href="#feedback" class="navbar_link"> Feedback </a>
@@ -58,21 +59,148 @@
                             <div class="user_img"> 
                                 <i class="fa fa-user"></i>
                             </div>
-                            <a href="#" class="user">
+                            <span class="user" >
                                 May
-                            </a>
+                            </span>
+                            <div class="dropdown_icon">
+                                <!-- <a href="#"> -->
+                                    <i class="fas fa-caret-down"> </i>
+                                <!-- </a>                                 -->
+                            </div>
+                            <ul class="acc_detail acc_detail_white d_none hide_menu">
+                                <li >
+                                    <a href="assest/html/cart_table.html"> My Order </a>
+                                </li>
+                                <li> Change Password</li>
+                                <li class="logout"> Logout</li>
+                            </ul>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="cart">
-                        <a href="#"> <i class="fa fa-cart-plus"></i></a>
-                        <span class="badge"> </span>
-                    </div>
+                        <a class="cart_icon"> 
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge"></span>
+                        </a>
+                    </div>                   
+                    
                 </div>
             </div>
         </div>
     </header>
-<!-- for Navbar end -->
-    
+ <!-- for Navbar end -->
+
+<!-- for Mini Cart start -->
+    <div class="mini_cart_page hide_menu d_none">
+        <div class="mini_cart_wrapper">
+            <div class=" mini_cart_header flex_between">
+                <p> Shopping Cart</p>
+                <span class="close_btn"> 
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <hr class="mini_cart_line">
+            <div class="mini_cart_content">
+                <ul class="mini_cart_items_list">
+                    <!-- <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu10.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Korea Fried Chickken </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity" class="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="remove_item_btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu14.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Cheese Piza </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity" class="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        12.77
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="remove_item_btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu1.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Appetizer and Salad </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="2"
+                                min="1" max="50" id="item_quantity" class="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        15.99
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="remove_item_btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                    </li> -->
+                </ul>
+                <hr class="mini_cart_line">
+                <div class="subtotal flex_between">
+                    <h4 class="cart_total_price"> Subtotal </h4>
+                    <div class="total_amount">
+                        
+                        <span class="amount subtotal_price"> 
+                            0.00
+                        </span>
+                    </div>
+                </div>
+                <hr class="mini_cart_line">
+                <div class="mini_cart_btn">
+                    <div class="btn view_cart_btn"> 
+                        <a href="assest/html/cart_table.html"> View Cart</a>
+                    </div>
+                    <div class="btn checkout_cart_btn"> 
+                        <a href="assest/html/checkout.html"> Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="no_item d_none">
+            There is no item
+        </div>
+    </div>
+<!-- for Mini Cart start -->
+
 <!-- For Login Form Include start -->
     <!-- <div include_html="assest/html/form.html" class="form_include">
 
@@ -663,7 +791,7 @@
                         <input type="email" name="email" id="email" class="email" placeholder="Email" />
                         <input type="text" name="msg" id="msg" class="msg" placeholder="Message" />
             
-                        <button type="submit" class="btn">Submit</button>
+                        <button type="submit" class="contact_btn">Submit</button>
                     </form>
                     </div>
             
@@ -716,8 +844,13 @@
 
 <!-- Min Js File -->
 
-<script type="text/javascript" src="assest/js/include.js"> </script>
-<script type="text/javascript" src="assest/js/changeAcc.js"> </script>
+<script src="assest/js/badge_count.js"> </script>
+<script src="assest/js/changeAcc.js"> </script>
+<script src="assest/js/dropdown_acc.js"> </script>
+
+<script src="assest/js/cart_item_store.js"> </script>
+<script src="assest/js/mini_cart.js"> </script>
+
 <script  type="text/javascript" src="assest/js/custom.js"></script>
 <script  type="text/javascript" src="assest/js/popular_menu.js"></script>
 

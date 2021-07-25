@@ -13,6 +13,9 @@
     <!-- Custom Css -->
     <link rel="stylesheet" href="../css/_common.css">
     <link rel="stylesheet" href="../css/menu.css">  
+    <link rel="stylesheet" href="../css/mini_cart.css">
+    
+    
 <!-- End Custom Css -->
     <title>Restaurant</title>    
 </head>
@@ -53,20 +56,149 @@
                             <div class="user_img"> 
                                 <i class="fa fa-user"></i>
                             </div>
-                            <a href="#" class="user">
-                                <!-- May -->
-                            </a>
+                            <span class="user" >
+                                May
+                            </span>
+                            <div class="dropdown_icon">
+                                <!-- <a href="#"> -->
+                                    <i class="fas fa-caret-down"> </i>
+                                <!-- </a>                                 -->
+                            </div>
+                            <ul class="acc_detail acc_detail_white d_none hide_menu">
+                                <li >
+                                    <a href="cart_table.html"> My Order </a>
+                                </li>
+                                <li> Change Password</li>
+                                <li class="logout"> Logout</li>
+                            </ul>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="cart">
-                        <a href="#"> <i class="fa fa-cart-plus"></i></a>
-                        <span class="badge"> </span>
-                    </div>
+                        <a href="#" class="cart_icon"> 
+                            <i class="fa fa-cart-plus"></i>
+                            <span class="badge"> </span>
+                        </a>
+                    </div>                   
+                    
                 </div>
             </div>
         </div>
     </header>
 <!-- for Navbar end -->
+
+<!-- for Mini Cart start -->
+    <div class="mini_cart_page hide_menu d_none">
+        <div class="mini_cart_wrapper">
+            <div class=" mini_cart_header flex_between">
+                <p> Shopping Cart</p>
+                <span class="close_btn"> 
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <hr class="mini_cart_line">
+            <div class="mini_cart_content">
+                <ul class="mini_cart_items_list">
+                <!-- /..
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu10.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Korea Fried Chickken </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity" class="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        5
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="remove_item_btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu14.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Cheese Piza </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="1"
+                                min="1" max="50" id="item_quantity" class="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        12.77
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="remove_item_btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="mini_cart_item ">
+                        <div class="mini_cart_item_img">
+                            <img src="../img/menu/Food/menu1.png" alt="">
+                        </div>
+                        <div class="mini_cart_item_detail">
+                            <h4 class="item_name"> Appetizer and Salad </h4>
+                            <div class="flex_between item_amount">
+                                <input type="number" value="2"
+                                min="1" max="50" id="item_quantity" class="item_quantity">
+                                <span class="multi_icon">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <div class="item_price">
+                                    <span class="dollar_sign"> $</span>
+                                    <span class="amount"> 
+                                        15.99
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="remove_item_btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </div>
+                    </li>
+                ../ -->
+                </ul>
+                <hr class="mini_cart_line">
+                <div class="subtotal flex_between">
+                    <h4 class="cart_total_price"> Subtotal </h4>
+                    <div class="total_amount">
+                        
+                        <span class="amount subtotal_price"> 
+                            0.00
+                        </span>
+                    </div>
+                </div>
+                <hr class="mini_cart_line">
+                <div class="mini_cart_btn">
+                    <div class="btn view_cart_btn"> 
+                        <a href="cart_table.html"> View Cart</a>
+                    </div>
+                    <div class="btn checkout_cart_btn"> 
+                        <a href="checkout.html"> Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="no_item d_none">
+            There is no item
+        </div>
+    </div>
+<!-- for Mini Cart start -->
 
 <!-- Menu Section Start -->
     <section class="menu_section" id="menu"> 
@@ -101,7 +233,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Food/menu2.png" alt="">
+                                        <img src="../img/menu/Food/menu2.png" alt="" class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Popular </span>
@@ -115,8 +247,9 @@
                                         <p> Pizza</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $15.49</span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 13.22 </span>                                           
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -130,7 +263,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Food/menu1.png" alt="">
+                                        <img src="../img/menu/Food/menu1.png" alt="" class="menuImage">
                                     </div>
                                     <!-- <div class="menu_announce">
                                         <span> Popular </span>
@@ -144,8 +277,9 @@
                                         <p> Appetizer & Salad</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $3 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 12 </span>                                           
                                         </div>
                                         <!-- <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -159,7 +293,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Food/menu3.png" alt="">
+                                        <img src="../img/menu/Food/menu3.png" alt="" class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Sale </span>
@@ -170,12 +304,15 @@
                                 </div>
                                 <div class="menu_card_body">
                                     <div class="menu_item_name mt_1">
-                                        <p> Korea Fried Chicken</p>
+                                        <p class="itemName"> Korea Fried Chicken</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price discount_price">
-                                            <span> $19.23 </span> 
-                                            <span> $17.30</span>                                          
+                                        <div class=" discount_price">
+                                            <span> 19.23K </span> 
+                                            <div class="menu_price">
+                                                <span class="dollar_sign"> $</span>
+                                                <span class="menu_item_price"> 17.30</span> 
+                                            </div>                                         
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -206,8 +343,9 @@
                                         <p> Pasta</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $3.5 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 3 </span>                                           
                                         </div>
                                     <!--  <div class="menu_item_stock">
                                             <span> Out of Stock</span>
@@ -221,7 +359,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Food/menu5.jpg" alt="">
+                                        <img src="../img/menu/Food/menu5.jpg" alt=""class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Popular </span>
@@ -235,8 +373,9 @@
                                         <p> Rice Tower</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $4.57 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 3 </span>                                           
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -250,7 +389,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Food/menu6.png" alt="">
+                                        <img src="../img/menu/Food/menu6.png" alt="" class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Popular </span>
@@ -264,8 +403,9 @@
                                         <p> Toppokki</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $5.49 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 11.3 </span>                                           
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Out of Stock</span>
@@ -286,7 +426,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/fruit-cake.jpg" alt="">
+                                    <img src="../img/menu/Cake/fruit-cake.jpg" alt="" class="menuImage">
                                 </div>
                                 <div class="menu_announce">
                                     <span> Popular </span>
@@ -300,8 +440,9 @@
                                     <p> Fruit Cake </p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 8 </span>                                           
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -315,7 +456,7 @@
                          <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/opera-cake.jpg" alt="">
+                                    <img src="../img/menu/Cake/opera-cake.jpg" alt="" class="menuImage">
                                 </div>
                                 <!-- <div class="menu_announce">
                                     <span> Popular </span>
@@ -329,8 +470,9 @@
                                     <p>Opera Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 10 </span>                                           
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -344,7 +486,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/flourless-orange-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/flourless-orange-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 <div class="menu_announce">
                                     <span> Sale </span>
@@ -358,9 +500,12 @@
                                     <p> Flourless Orange Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price discount_price">
-                                        <span> $5 </span> 
-                                        <span> $4</span>                                          
+                                    <div class="discount_price">
+                                        <span> 5K </span>
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 4</span>    
+                                        </div>                                      
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -376,7 +521,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/caramel-mud-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/caramel-mud-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 <!-- <div class="menu_announce">
                                     <span> Popular </span>
@@ -390,8 +535,9 @@
                                     <p> Caramel Mud Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $5 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 5 </span>                                           
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Out of Stock</span>
@@ -405,7 +551,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/choc-ripple-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/choc-ripple-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 <div class="menu_announce">
                                     <span> Popular </span>
@@ -419,8 +565,9 @@
                                     <p> Choc Ripple Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $1.5 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 3.2 </span>                                           
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -434,7 +581,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/banana-caramel-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/banana-caramel-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 <!-- <div class="menu_announce">
                                     <span> Popular </span>
@@ -448,8 +595,9 @@
                                     <p> Banana Caramel Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 7 </span>                                           
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -465,7 +613,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/red-velvet-cake.jpg" alt="">
+                                    <img src="../img/menu/Cake/red-velvet-cake.jpg" alt="" class="menuImage">
                                 </div>
                                
                                 <div class="menu_addIcon scale_1">
@@ -477,8 +625,9 @@
                                     <p> Red Velvet Cake </p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 3 </span>                                           
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -492,7 +641,7 @@
                          <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/black-forest-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/black-forest-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 <!-- <div class="menu_announce">
                                     <span> Popular </span>
@@ -506,8 +655,9 @@
                                     <p> Black Forest Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 8 </span>                                           
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -521,7 +671,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/lemon-tea-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/lemon-tea-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 <div class="menu_announce">
                                     <span> Sale </span>
@@ -535,9 +685,13 @@
                                     <p> Lemon Tea Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price discount_price">
-                                        <span> $5 </span> 
-                                        <span> $4</span>                                          
+                                    <div class= "discount_price">
+                                        <span> 5K </span> 
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 4</span> 
+                                        </div>
+
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -553,7 +707,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/amazing-maltesers-cake.jpeg" alt="">
+                                    <img src="../img/menu/Cake/amazing-maltesers-cake.jpeg" alt="" class="menuImage">
                                 </div>
                                 
                                 <div class="menu_addIcon scale_1">
@@ -565,8 +719,9 @@
                                     <p> Amazing Maltesers Cake </p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 3 </span>                                           
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -580,7 +735,7 @@
                          <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/koala-crisp-mini-cupcakes.jpg" alt="">
+                                    <img src="../img/menu/Cake/koala-crisp-mini-cupcakes.jpg" alt="" class="menuImage">
                                 </div>
                                 <div class="menu_announce">
                                     <span> Popular </span>
@@ -594,8 +749,9 @@
                                     <p> Koala Crisp Mini Cupcakes</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 3 </span>                                           
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Out Of Stock</span>
@@ -609,7 +765,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/chocolate-bread-cake.jpg" alt="">
+                                    <img src="../img/menu/Cake/chocolate-bread-cake.jpg" alt="" class="menuImage">
                                 </div>
                                 <!-- <div class="menu_announce">
                                     <span> Sale </span>
@@ -623,9 +779,12 @@
                                     <p> Chocolate Bread Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price discount_price">
-                                        <span> $5 </span> 
-                                        <span> $4</span>                                          
+                                    <div class="discount_price">
+                                        <span> 5K </span> 
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 4</span> 
+                                        </div>                                         
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -641,7 +800,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/Mini-Classic-Cheesecakes.jpg" alt="">
+                                    <img src="../img/menu/Cake/Mini-Classic-Cheesecakes.jpg" alt="" class="menuImage">
                                 </div>
                                 
                                 <div class="menu_addIcon scale_1">
@@ -653,8 +812,9 @@
                                     <p> Mini Classic Cheesecakes </p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 5 </span>                                           
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -668,7 +828,7 @@
                          <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/carrot-cake.jpg" alt="">
+                                    <img src="../img/menu/Cake/carrot-cake.jpg" alt=""class="menuImage">
                                 </div>
                                 <!-- <div class="menu_announce">
                                     <span> Popular </span>
@@ -682,8 +842,9 @@
                                     <p>Carrot Cake</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price">
-                                        <span> $3 </span>                                           
+                                    <div class="menu_price">
+                                        <span class="dollar_sign"> $</span>
+                                        <span class="menu_item_price"> 3 </span>                                           
                                     </div>
                                     <!-- <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -697,7 +858,7 @@
                         <div class="menu_card">
                             <div class="menu_card_top">
                                 <div class="menu_img flex_center">
-                                    <img src="../img/menu/Cake/key-lime-pie.jpg" alt="">
+                                    <img src="../img/menu/Cake/key-lime-pie.jpg" alt="" class="menuImage">
                                 </div>
                                 <div class="menu_announce">
                                     <span> Sale </span>
@@ -711,9 +872,12 @@
                                     <p> Key Lime Pie</p>
                                 </div>
                                 <div class="mt_1 menu_item_instock flex_center">
-                                    <div class="menu_item_price discount_price">
-                                        <span> $5 </span> 
-                                        <span> $4</span>                                          
+                                    <div class=" discount_price">
+                                        <span> 5K </span> 
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 4</span>  
+                                        </div>                                        
                                     </div>
                                     <div class="menu_item_stock">
                                         <span> Low Stock</span>
@@ -734,7 +898,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Drink/mocha_green tea.png" alt="">
+                                        <img src="../img/menu/Drink/mocha_green tea.png" alt="" class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Popular </span>
@@ -748,8 +912,9 @@
                                         <p> Green Tea Mocha</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $3 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 3 </span>                                           
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -763,7 +928,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Drink/cocktail_color.png" alt="">
+                                        <img src="../img/menu/Drink/cocktail_color.png" alt="" class="menuImage">
                                     </div>
                                     <!-- <div class="menu_announce">
                                         <span> Popular </span>
@@ -777,8 +942,9 @@
                                         <p> ColorFul Hawii</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $3 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 3 </span>                                           
                                         </div>
                                         <!-- <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -792,7 +958,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Drink/drink_strawberry.png" alt="">
+                                        <img src="../img/menu/Drink/drink_strawberry.png" alt="" class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Sale </span>
@@ -806,9 +972,12 @@
                                         <p> Strawberry Bubble</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price discount_price">
-                                            <span> $5 </span> 
-                                            <span> $4</span>                                          
+                                        <div class="discount_price">
+                                            <span> 5K </span> 
+                                            <div class="menu_price">
+                                                <span class="dollar_sign"> $</span>
+                                                <span class="menu_item_price"> 4</span> 
+                                            </div>                                         
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -824,7 +993,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Drink/sunrise_cocktail.png" alt="">
+                                        <img src="../img/menu/Drink/sunrise_cocktail.png" alt="" class="menuImage">
                                     </div>
                                     <!-- <div class="menu_announce">
                                         <span> Popular </span>
@@ -838,8 +1007,9 @@
                                         <p> Sirise Cocktail</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $5 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 5 </span>                                           
                                         </div>
                                         <div class="menu_item_stock">
                                             <span> Out of Stock</span>
@@ -853,7 +1023,7 @@
                             <div class="menu_card">
                                 <div class="menu_card_top">
                                     <div class="menu_img flex_center">
-                                        <img src="../img/menu/Drink/drink_orange.png" alt="">
+                                        <img src="../img/menu/Drink/drink_orange.png" alt="" class="menuImage">
                                     </div>
                                     <div class="menu_announce">
                                         <span> Popular </span>
@@ -867,8 +1037,9 @@
                                         <p> Orange Juice</p>
                                     </div>
                                     <div class="mt_1 menu_item_instock flex_center">
-                                        <div class="menu_item_price">
-                                            <span> $1.5 </span>                                           
+                                        <div class="menu_price">
+                                            <span class="dollar_sign"> $</span>
+                                            <span class="menu_item_price"> 10 </span>                                           
                                         </div>
                                         <!-- <div class="menu_item_stock">
                                             <span> Low Stock</span>
@@ -890,7 +1061,13 @@
         </div>
     </section>
 <!--End Menu Section Start -->
+    <script src="../js/badge_count.js"> </script>
     <script src="../js/changeAcc.js"> </script>
+    <script src="../js/dropdown_acc.js"> </script>
+
+    <script src="../js/mini_cart.js"></script>
+    <script src="../js/cart_item_store.js"></script>
+
     <script src="../js/menu.js"> </script>
 </body>
 </html>

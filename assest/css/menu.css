@@ -11,7 +11,7 @@ html,body{
     .menu_section{
         position: absolute;
         top: 10%;
-        background-color: var(--white);
+        background-color: #FAFAF8;
         
     }
 /* End menu_navbar_section */
@@ -72,7 +72,7 @@ html,body{
         color:var(--text-black-900);
         overflow: hidden;
         box-shadow:var(--outer-shadow);
-        background-color: #F9F9F8;
+        background-color: #fff;
     }
 
 
@@ -110,7 +110,13 @@ html,body{
         margin-top: 2rem;
     }
     .menu_card_body{ }
-
+    .menu_price{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .menu_price .dollar_sign{
+        padding:0 5px;
+    }
 
     .menu_item_name{
         text-align: center;
@@ -127,8 +133,9 @@ html,body{
         color: var(--pink);
         /* font-size: 16px; */
     }
+    .discount_price{display: flex;}
 
-    .discount_price span:first-child{
+    .discount_price> span{
         text-decoration: line-through var(--pink);
         margin-right: 10px;
         text-align: center;

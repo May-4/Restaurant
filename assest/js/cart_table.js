@@ -3,9 +3,11 @@
 
     let table =document.querySelector(".shop_table");
     let msg= document.querySelector(".no_item_msg");
-    let no_count =sessionStorage.getItem("badge_count");
-// Get data from Storage (Cart_item_data)
-    if(no_count){
+    let hasCount =sessionStorage.getItem("badge_count");
+
+/************************* Get data from Storage (Cart_item_data)  And Set Data to Table 
+*   **************************** */
+    if(hasCount){
         table.classList.remove("d_none");
         table.classList.add("d_table");
         msg.classList.add("d_none");
@@ -13,9 +15,9 @@
         // Get data from Storage (Cart_item_data)
         let get_cart_data= JSON.parse( sessionStorage.getItem("cart_item_data") );
         console.log( get_cart_data);
-        // Add Data
+        // Add Data to Table
         for(let index=0; index<get_cart_data.length; index++){
-            shop_table.innerHTML += `
+            shop_table.innerHTML+=  `
                 <tr class="product_detail">
                     <td  class="product_thumbnail">
                         <img src="${get_cart_data[index].img}" alt="">
@@ -25,8 +27,8 @@
                     </td>
                     <td  class="product_price">
                         <p class="amount">
-                            <span class="dollar">$</span>
                             <span class="amount_value">${get_cart_data[index].price}</span>
+                            <span class="dollar">K</span>
                         </p>
                     </td>
                     <td  class="product_quantity">
@@ -36,9 +38,9 @@
                         </p>
                     </td>
                     <td  class="product_subtotal">
-                        <p class="subtotal">
-                            <span class="dollar">$</span>
+                        <p class="subtotal">                            
                             <span class="amount_value"> 10</span>
+                            <span class="dollar">K</span>
                         </p>
                     </td>
                     <td  class="product_remove">
@@ -47,7 +49,7 @@
                         </p>
                     </td>
                 </tr>
-            `;
+            `;            
         }
     }else{
 
@@ -56,12 +58,12 @@
         msg.classList.remove("d_none");
         msg.classList.add("d_flex");
     }
-    
+
     let product= document.querySelectorAll(".product_detail");
     let price= document.querySelectorAll(".amount>.amount_value");
     let quantity= document.querySelectorAll(".quantity> input[type='number']");
     let subtotal_item= document.querySelectorAll(".subtotal>.amount_value");
-    
+
     let all_subtotal= document.querySelector(".allSubtotal >p >.amount_value");
     let tax= document.querySelector(".tax >p >.amount_value");
     let total= document.querySelector(".total >p >.amount_value");
@@ -69,14 +71,16 @@
 // Work Calc When Window is Load and Can see at first
     window.addEventListener("load",()=>{
         let subtotal_int_first=0; 
-        common_calc( subtotal_int_first)
+        common_calc( subtotal_int_first);       
+
     })
 
-// Work Calc When Tbody(shop_table) is Change and user  click 
+// Work Calculate Price When Tbody(shop_table) is Change and user  click 
     function shop_cart(){
         shop_table.addEventListener("change",()=>{        
-            all_subtotal.innerHTML=" "; let subtotal_int =0;
-            common_calc( subtotal_int);      
+            all_subtotal.innerHTML=""; let subtotal_int =0;
+            common_calc( subtotal_int);  
+            
         })
     }
     shop_cart();
@@ -84,16 +88,53 @@
 // Remove Btn and Upadate Price
     let remove_btns= document.querySelectorAll(".product_remove> .close_btn");
     for(let i=0;i< remove_btns.length;i++){   
-        
+        remove_btns[i].innerHTML= "close";
         remove_btns[i].addEventListener("click",()=>{ 
             let product_row= product[i];
-            remove_item(i, product_row);            
+            let rest= remove_item(i, product_row);  
         })
+        
     }
     
+// store data for Checkout  Page
+    let check_btn= document.querySelector(".checkout_btn");
+    check_btn.addEventListener("click",checkout_data);
+
+    function checkout_data(){
+
+        let  checkout_item={ }; 
+        checkout_item.product_row_arr=[];
+
+        let product_row= shop_table.children; // For product detail row <tr>
+        for(let row=0; row< product_row.length; row++){
+            let product_col_obj={};
+            let product_col= product_row[row].children; // for <td>
+            
+            product_col_obj.img= product_col[0].querySelector(".product_thumbnail>img").src;
+            product_col_obj.name= product_col[1].querySelector(".product_name> p").innerHTML;
+            product_col_obj.quantity= product_col[3].querySelector(".quantity> input[type='number']").value;
+            product_col_obj.subtotal= product_col[4].querySelector(".subtotal>.amount_value").innerHTML;
+            
+            checkout_item.product_row_arr[row] = product_col_obj;
+        }
+        checkout_item.total_price= all_subtotal.innerHTML;
+
+        let data_string= JSON.stringify(checkout_item);
+        sessionStorage.setItem("store_checkout_data",data_string);
+
+        let checkout_output= JSON.parse(sessionStorage.getItem("store_checkout_data"));
+        console.log(checkout_output); 
+    }
 
 
-// Common Function // This function call other Function
+
+
+
+
+
+    /*************************  Calculate Price  Part     **************************** */
+
+    // Common Function // This function call other Function
     function common_calc( subtotal_int){
         for( let i=0; i<product.length; i++){
             // Change Subtoatl item when  input Change
@@ -102,6 +143,7 @@
             // Change Subtoatl all_item when input Change
             let subtotal_new= subtotal_item[i].innerHTML;
             subtotal_int= all_subTotal(subtotal_int , subtotal_new);
+
         }
     }
 
@@ -110,7 +152,7 @@
         return result.toFixed(2);
     }
     function all_subTotal(subtotal_int , subtotal_new){
-        subtotal_int+= parseFloat(subtotal_new);
+        subtotal_int += parseFloat(subtotal_new);
         all_subtotal.innerHTML =subtotal_int.toFixed(2);
 
         total_money( all_subtotal.innerHTML);
@@ -123,11 +165,14 @@
     }
 
     function remove_item(index,product_row){
-        let msg= confirm("Are u sure");
+        let msg= confirm("Are u sure want to delete this Item");
         if(msg){
             let product_subPrice=  subtotal_item[index];
             product_row.remove();
-            update_price(product_subPrice);        
+            update_price(product_subPrice);     
+            
+            let rest_product= document.querySelectorAll(".product_detail");
+            return rest_product;
         }
     }
     function update_price(product_subPrice){

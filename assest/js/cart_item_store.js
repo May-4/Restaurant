@@ -25,16 +25,16 @@ function ready(){
         quantityInput.addEventListener('change',quantityChange);
     }
 
-    var addtoCartButtons = document.getElementsByClassName('menu_addIcon');
+    // var addtoCartButtons = document.getElementsByClassName('menu_addIcon');
 
-    for(var i = 0 ; i < addtoCartButtons.length ; i ++){
-        var addtoCartButton = addtoCartButtons[i];
-        addtoCartButton.addEventListener('click', addtoCartItems);
-    }
+    // for(var i = 0 ; i < addtoCartButtons.length ; i ++){
+    //     var addtoCartButton = addtoCartButtons[i];
+    //     addtoCartButton.addEventListener('click', addtoCartItems);
+    // }
 }
 
 
-// For remove Cart Items 658 878 6661 2K0Sgp
+// For remove Cart Items
 function removeCartItems(event){
 
     var buttonClicked = event.target;
@@ -109,9 +109,9 @@ function additemsToCart(image,title,price){
                             <i class="fas fa-times"></i>
                     </span>
                     <div class="item_price">
-                        <span class="dollar_sign"> $</span>
                         <span class="amount"> 
                                 ${price}</span>
+                        <span class="dollar_sign"> K</span>
                      </div>
                 </div>
                 <span class="remove_item_btn">

@@ -41,41 +41,58 @@
    for(let index=0; index < addIcons.length; index++){         
         
         let item= addIcons[index];        
-        
-        item.addEventListener("click",( )=>{ 
+        // item.innerHTML= "icon";
+        item.addEventListener("click",( e)=>{ 
             let user_name = sessionStorage.getItem("user_name");         
             if(!user_name){
                 alert(" Please Login for your order");
                 return;
             }  
-            addItem(item,index,addArray_toSession);
+            addItem(e,item,index,addArray_toSession);
            
         });   
     }
-    function addItem( addIcon,index,addArray_toSession ){
-        // let stock= document.querySelectorAll(".menu_item_instock");
-        // let menu_stock= (stock[index].lastElementChild.children[0].innerHTML).toLowerCase();
-        // console.log(menu_stock);
-        
-        // if(menu_stock != "out of stock"){
-            let hasClass= addIcon.classList.contains("fa-cart-plus");  
-            if(hasClass){
-                get_badge+= 1; console.log(get_badge);
-                set_badge(get_badge);  
-                badge.innerHTML =parseInt( sessionStorage.getItem("badge_count") );
 
-                addIcon.classList.remove("fa-cart-plus");
-                addIcon.classList.add("fa-check-circle");
-            
-            }else{
-                alert("Your item is alerdy get in cart");
+
+/*************************  Add Data From Menu Card to Mini_cart**************************** */
+
+
+    function addItem(event, addIcon,index,addArray_toSession ){
+        let stock= document.querySelectorAll(".menu_item_instock");
+        // let menu_stock= stock[index].lastElementChild.children[0];
+        // let out =menu_stock.innerHTML.toLowerCase();
+
+        // Check Out of Stock Item
+        let menu_stock= stock[index].lastElementChild.classList.contains("menu_item_stock");
+        if(menu_stock){
+            let get_span=stock[index].lastElementChild.innerHTML.trim();
+            let test="<span> Out of Stock</span>";
+            if(get_span===test){
+                console.log(get_span);
+                alert("Sorry, This item is Out of stock: Please! Choose another!");
+                return;
             }
-            addArray_toSession(index);
-        // }else {
-        //     alert("Sorry, This item is Out of stock;Choose another!");
-        // }
+        }
+        
+        let hasClass= addIcon.classList.contains("fa-cart-plus");  
+        if(hasClass){
+            get_badge+= 1; 
+            set_badge(get_badge);  
+            badge.innerHTML =parseInt( sessionStorage.getItem("badge_count") );
+
+            addIcon.classList.remove("fa-cart-plus");
+            addIcon.classList.add("fa-check-circle");
+
+            addtoCartItems(event); // From cart_item_store.js
+        
+        }else{
+            alert("Your item is alerdy get in cart");
+        }
+        addArray_toSession(index);
+       
        
     }
+    
     function set_badge(get_badge){
         sessionStorage.setItem("badge_count",get_badge);
         console.log( sessionStorage.getItem("badge_count"));

@@ -20,8 +20,7 @@
         get_badge=0;
     }  
 
-//  Add empty array to Session Or Check circle Icon and Get Arry from Session
-
+//  Add empty array to Session Or Check Circle Icon and Get Position Array from Session
     if(sessionStorage.getItem("cart_get_poc")){
         let poc_data= JSON.parse(sessionStorage.getItem("cart_get_poc"));
         for(let i=0; i<poc_data.length; i++){
@@ -37,11 +36,11 @@
     }
 
    
-// Click Addicon to add count in navbar cart
+/*************************Click Addicon to add count in navbar cart **********************/
    for(let index=0; index < addIcons.length; index++){         
         
         let item= addIcons[index];        
-        // item.innerHTML= "icon";
+        item.innerHTML= "icon";
         item.addEventListener("click",( e)=>{ 
             let user_name = sessionStorage.getItem("user_name");         
             if(!user_name){
@@ -54,21 +53,22 @@
     }
 
 
-/*************************  Add Data From Menu Card to Mini_cart**************************** */
+/*************************  Add Data From Menu Card to Mini_cart
+ *                            And Add Badge Count in Navbar            *  * **************************** */
 
 
     function addItem(event, addIcon,index,addArray_toSession ){
         let stock= document.querySelectorAll(".menu_item_instock");
-        // let menu_stock= stock[index].lastElementChild.children[0];
-        // let out =menu_stock.innerHTML.toLowerCase();
+        let menu_stock= stock[index].lastElementChild.children[0];
+        let out =menu_stock.innerHTML.toLowerCase().trim();
 
         // Check Out of Stock Item
-        let menu_stock= stock[index].lastElementChild.classList.contains("menu_item_stock");
-        if(menu_stock){
-            let get_span=stock[index].lastElementChild.innerHTML.trim();
-            let test="<span> Out of Stock</span>";
-            if(get_span===test){
-                console.log(get_span);
+        let has_menu_stock= stock[index].lastElementChild.classList.contains("menu_item_stock");
+        if(has_menu_stock){
+            // let get_span=stock[index].lastElementChild.innerHTML.trim();
+            let test="out of stock";
+            if(out===test){
+                console.log(test);
                 alert("Sorry, This item is Out of stock: Please! Choose another!");
                 return;
             }
@@ -98,7 +98,9 @@
         console.log( sessionStorage.getItem("badge_count"));
     }
 
-// Get checked(selected) icon and save to Sesseion
+
+/************************* Get checked(selected) icon and save to Sesseion ** **************************** */
+
     function addArray_toSession (check_poc){ 
     // Get Array
        let get_data=JSON.parse( sessionStorage.getItem("cart_get_poc") );

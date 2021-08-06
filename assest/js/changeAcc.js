@@ -58,6 +58,7 @@
             sessionStorage.removeItem("badge_count");
             sessionStorage.removeItem("cart_item_data");
             sessionStorage.removeItem("cart_get_poc");
+            
 
             // remove_table(badge_get)
             remove_badge_count(badge_get)
@@ -76,7 +77,7 @@
             no_item.classList.remove("d_none");
             no_item.classList.add("d_block");         
         }
-        badge_get.innerHTML="";
+        badge_get.innerHTML=" ";
     } remove_badge_count();
 
     function remove_check_icon(){

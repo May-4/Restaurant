@@ -43,7 +43,7 @@
         get_href.classList.add("d_block");
     }
     
-//  Show Mini Cart  page when click fas-cart-plus
+//  Show Mini Cart page when click fas-cart-plus
     function toShow_miniCart(){
         let add_icons =document.querySelectorAll(".menu_addIcon");
         add_icons.forEach( add_icon=>{

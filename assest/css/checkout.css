@@ -1,83 +1,158 @@
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+      /*@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');*/
+      :root{
+        --success-color:#07f737;
+        --error-color:#f70707;
+    }
     
-    .d_block{ display:block;}
-    .d_none{ display: none;}
+        .d_block{ display:block;}
+        .d_none{ display: none;}
+        
+        .ptop{
+            background-color: deeppink;
+            text-align: center;
+            color: #fff;
+            padding: 8px;
+            font-weight: bold;
+        }
     
-    .ptop{
-        background-color: deeppink;
-        text-align: center;
-        color: #fff;
-        padding: 8px;
-        font-weight: bold;
+        h1{
+            text-align: center;
+            text-shadow: 3px 3px 5px #fff;
+        }
+    
+        .img{
+            background-image: url(../img/checkout/bgpic.jpg);
+            width: 98%;
+            height: 170px;
+    
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 170px;
+            font-size: 50px;
+            font-weight: bolder;
+            letter-spacing: 10px;
+            color: #fff;
+        }
+        .container p{
+            text-align: right;
+            font-size: 17px;
+            font-weight: bold;
+            margin-right: 37px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .container p a{
+            text-decoration: none;
+            color: deeppink;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .ship .mt-3{
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 4px;
+        }
+        .border p{
+            text-align: left;
+            margin-left: 5px;
+            color: #bfbcbb;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    
+        .border{
+           box-shadow: 1px 1px 2px hotpink;
+        }
+        .hideaa{
+            visibility: hidden;
+        }
+    
+        .ordersummary p{
+            color: #000;
+            font-weight: 350;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .item p{
+            text-align: left;
+            color: #000;
+    
+        }
+        .modal label{
+          font-size: 14px;
+          font-weight: 100;
+          color: #272727;
+        }
+    
+        span{
+            font-size: 18px;
+        }
+    
+        .form.success input{
+        border-color: var(--success-color);
     }
-
-    h1{
-        font-family: 'Dancing Script', cursive;
-        text-align: center;
-        text-shadow: 3px 3px 5px #fff;
+    
+    .form.error input{
+        border-color: var(--error-color);
     }
-
-    .img{
-        background-image: url(../img/checkout/bgpic.jpg);
-        width: 98%;
-        height: 170px;
-
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 170px;
-        font-size: 50px;
-        font-weight: bolder;
-        letter-spacing: 10px;
-        color: #fff;
+    
+    .form small{
+        color: var(--error-color);
+        
     }
-    .container p{
+    
+    .form.error small{
+        visibility: visible;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+    .checkout_mini{
+        max-height: 300px;
+        overflow-y:auto;
+    }
+    /*Scrollbar width */
+      .checkout_mini::-webkit-scrollbar {
+          width: 8px;
+      }
+  
+      /* Track */
+      .checkout_mini::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+      }
+  
+      /* Handle */
+      .checkout_mini::-webkit-scrollbar-thumb {
+          background: #BB2D3B;
+          border-radius: 5px;
+      }
+      .checkout_item_name{
+        font-size: 14px !important;
+      }
+      .w-25{
+        width: 35%!important;
         text-align: right;
-        font-size: 17px;
-        font-weight: bold;
-        margin-right: 37px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .container p a{
-        text-decoration: none;
-        color: deeppink;
-        font-size: 17px;
-        font-weight: bold;
-    }
-    .ship .mt-3{
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 4px;
-    }
-    .border p{
-        text-align: left;
-        margin-left: 5px;
-        color: #bfbcbb;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .border{
-       box-shadow: 1px 1px 2px hotpink;
-    }
-    .hideaa{
-        visibility: hidden;
-    }
-
-    .ordersummary p{
-        color: #000;
-        font-weight: 350;
-        font-size: 16px;
-        margin-left: 10px;
-    }
-    .item p{
-        text-align: left;
-        color: #000;
-
-    }
-    .modal label{
-      font-size: 14px;
-      font-weight: 100;
-      color: #272727;
-    }
+      }
+      .backdrop-modal{
+        opacity: 0 !important;
+        position: relative !important;
+      }
+      .modal_place{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1040;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+        opacity: .5;
+      }
+    
 

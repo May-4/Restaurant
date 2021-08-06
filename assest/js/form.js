@@ -64,7 +64,9 @@
         if(user_name.value && user_pwd.value){
             // change localStorage for perment when next login
             let name= slice_str(user_name.value);
-            sessionStorage.setItem("user_name", name);       
+            sessionStorage.setItem("user_name", name);  
+            sessionStorage.setItem("user_pwd",user_pwd.value);
+            
             window.history.back();         
          }else{
              alert("Please Fill all Request.")

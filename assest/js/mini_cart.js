@@ -10,10 +10,10 @@
         })
     }
 
-// To Set data for Cart Table when click myOrder btn and View btn
+// To Set data for Cart Table when click myOrder btn and View btn in Navbar
     let view_btn= document.querySelector(".mini_cart_btn> .view_cart_btn");
     let myOrder=document.querySelector(".acc_detail> li> a");
-
+    
     setCartData(myOrder)
     setCartData(view_btn) 
     

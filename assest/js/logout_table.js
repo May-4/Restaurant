@@ -24,9 +24,9 @@
     }) 
     
     // Logout Acc
-    function logout(){
+    // function logout(){
         let logout= document.querySelector(".logout");
-        logout.addEventListener("click",( )=>{
+        logout.addEventListener("click",()=>{
 
             let login_acc= document.querySelector(".acc_login");
             let user_acc = document.querySelector(".acc_user");
@@ -36,38 +36,40 @@
                 
                 sessionStorage.removeItem("user_name");
 
-                remove_itemData()
+                remove_itemData(); 
 
-                login_acc.classList.remove("d_none");
-                user_acc.classList.remove("flex_center");
-                user_acc.classList.add("d_none");
+                // login_acc.classList.remove("d_none");
+                // user_acc.classList.remove("flex_center");
+                // user_acc.classList.add("d_none");
                 
 
             }
         })
-    }
-    logout();
+    // }
+    // logout();
 
     
 
     // Badge
     function remove_itemData(){
-        let badge_get =document.querySelector(".badge");
-
+       
         if(!sessionStorage.getItem("user_name")){
             console.log("no user name");
+            sessionStorage.removeItem("store_checkout_data");
             sessionStorage.removeItem("badge_count");
             sessionStorage.removeItem("cart_item_data");
             sessionStorage.removeItem("cart_get_poc");
 
-            remove_table(badge_get)
-            
+            remove_table_logout();
         }    
         
     }
-    function remove_table(badge_get){
+    function remove_table_logout(){
+
         // let cart_item= sessionStorage.getItem("badge_count");
         // if(!cart_item){
+            
+            let badge_get =document.querySelector(".badge");
             badge_get.innerHTML="";
             let table =document.querySelector(".shop_table");
             let msg= document.querySelector(".no_item_msg");
@@ -78,6 +80,7 @@
             msg.classList.add("d_flex");
 
             window.location.href="../../index.html";
+            
         // }
         // console.log(cart_item+"remove_table");
     }

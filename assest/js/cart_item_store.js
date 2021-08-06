@@ -75,7 +75,6 @@ function addtoCartItems(event){
 }
 
 // For Add to  Cart
-
 function additemsToCart(image,title,price){
 
     var cartRow = document.createElement('div');

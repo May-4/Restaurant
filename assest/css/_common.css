@@ -189,7 +189,7 @@
 .acc_detail_white{
         background: var(--pink);
     }
-.acc_detail_white li{
+.acc_detail_white li a{
         color:var(--white);
     }
 .acc_detail_white li:hover{

@@ -114,7 +114,7 @@ function additemsToCart(image,title,price){
                      </div>
                 </div>
                 <span class="remove_item_btn">
-                        <i class="fas fa-times"></i>
+                    <i class="fas fa-times"></i>
                 </span>
             </div>
     `

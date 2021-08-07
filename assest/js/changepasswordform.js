@@ -23,10 +23,10 @@ function checkrequired(inputarrs){
 
     inputarrs.forEach(function(inputarr){
         // console.log(inputarr);
-        // console.log(inputarr.value);
+        // console.log(inputarr.value);  
         // console.log(inputarr.id);
 
-        if(inputarr.value === ''){
+        if(inputarr.value==''){          
             showerror(inputarr,`${getfieldname(inputarr)} is required`);
         }else{
             showsuccess(inputarr);
@@ -38,7 +38,7 @@ function currentPwdMatch(current_pwd){
     let val=curpassword.value.trim();
     if(val!=user_pwd){
         showerror(current_pwd,"Please Enter Correct Password");
-        return;
+        return
     }
     change_form.classList.remove("d_none");
     change_form.classList.add("d_block");
@@ -46,13 +46,18 @@ function currentPwdMatch(current_pwd){
 }
 // Check Passwords Match for Change Password Form
 function checkpasswordsmatch(input1,input2){
-    if(input1.value !== input2.value){
-        showerror(input2,'Password do not match');
+    if(!input1.value.trim() && !input2.value.trim()){
         return;
     }
-    sessionStorage.setItem("user_pwd",input1.value);
-    // alert("Saved Successfully");
-    window.history.back();
+
+    if(input1.value !== input2.value){
+        showerror(input2,'Password do not match');
+    }else{
+        sessionStorage.setItem("user_pwd",input1.value);
+        // alert("Saved Successfully");
+        window.history.back();
+    }
+   
 }
 
 

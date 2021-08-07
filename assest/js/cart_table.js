@@ -46,7 +46,7 @@
                     </td>
                     <td  class="product_remove">
                         <p class="close_btn"> 
-                            <i class="fas fa-times"></i>
+                            <i class="fas fa-times"> </i>
                         </p>
                     </td>
                 </tr>
@@ -77,7 +77,7 @@
 // Remove Btn and Upadate Price
     let remove_btns= document.querySelectorAll(".product_remove> .close_btn"); 
     for(let i=0;i< remove_btns.length;i++){        
-        remove_btns[i].innerHTML= "close";       
+        // remove_btns[i].innerHTML= "close";       
          remove_btns[i].addEventListener("click",()=>{ 
 
             let product_row= remove_btns[i].parentElement.parentElement;

@@ -1,20 +1,28 @@
 
-    
 // //For Survey Form
 
-    const survey = document.getElementById('survey');
-    const end = document.querySelector('.end');
-    const options = document.querySelectorAll('.option1');
-    
-    const questions = document.querySelectorAll('.q1');
+const survey = document.getElementById('survey');
+const end = document.querySelector('.end');
+const options = document.querySelectorAll('.option1');
 
- // console.log(questions.length);
+const questions = document.querySelectorAll('.q1');
 
-
-var index = 0;
+const removeBtn = document.querySelector('.remove_btn');
 
 
- options.forEach((option) =>{
+//  console.log(questions.length);
+
+//For Remove questions
+removeBtn.addEventListener('click',()=>{
+
+    survey.style.display = 'none';
+    end.style.display = 'block';
+    })
+    //For Change Questions
+    var index = 0;
+
+
+    options.forEach((option) =>{
 
     // console.log(option);
 
@@ -48,7 +56,4 @@ var index = 0;
         }
         
     });
- });
-
-
- 
+});

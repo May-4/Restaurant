@@ -40,7 +40,7 @@
    for(let index=0; index < addIcons.length; index++){         
         
         let item= addIcons[index];        
-        item.innerHTML= "icon";
+        // item.innerHTML= "icon";
         item.addEventListener("click",( e)=>{ 
             let user_name = sessionStorage.getItem("user_name");         
             if(!user_name){
